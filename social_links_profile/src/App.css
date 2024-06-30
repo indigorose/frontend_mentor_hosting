@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', 'Oswald', serif, sans-serif;
+	font-size: 1.3rem;
+}
+
+:root {
+	--text--1: hsl(0, 0%, 100%);
+	--highlight: hsl(75, 94%, 57%);
+	--background--1: hsl(0, 0%, 20%);
+	--background--2: hsl(0, 0%, 12%);
+	--background--3: hsl(0, 0%, 8%);
+}
+
+body {
+	font-size: 14px;
+}
+
+.card {
+	border: 1px solid black;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
