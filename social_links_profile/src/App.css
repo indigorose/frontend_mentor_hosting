@@ -1,3 +1,4 @@
+/* Base styling */
 *,
 *::before,
 *::after {
@@ -7,7 +8,7 @@
 body {
 	margin: 0;
 	font-family: 'Montserrat', 'Oswald', serif, sans-serif;
-	font-size: 1.3rem;
+	font-size: 14px;
 }
 
 :root {
@@ -18,12 +19,10 @@ body {
 	--background--3: hsl(0, 0%, 8%);
 }
 
-body {
-	font-size: 14px;
-}
-
 .card {
 	border: 1px solid black;
+	margin: 300px auto;
+	max-width: 60%;
 }
 
 a {
@@ -32,4 +31,18 @@ a {
 
 li {
 	list-style: none;
+}
+
+.card--about {
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+/* image styling */
+.profile-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	width: 20%;
 }

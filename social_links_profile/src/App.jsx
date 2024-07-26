@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
+import profileImg from './assets/images/avatar-jessica.jpeg';
 // To run -- npm run dev
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div className="container">
         <section className="card">
-          
           <div className="card--about">
-            <img src="" alt="" />
-            <h1 className="card--name">
-              Jessica Randall
+            <img className='profile-img' src={profileImg} alt="portrait photo of Jessica" />
+            <h1 className="card--name">Jessica Randall
             </h1>
             <h2 className="card--sub">London, United Kingdom</h2>
             <p className="card--about">"Front-end developer and avid reader"</p>
