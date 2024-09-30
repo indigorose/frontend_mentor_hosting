@@ -5,7 +5,7 @@ import profileImg from './assets/images/avatar-jessica.jpeg';
 function App() {
 	return (
 		<>
-			<div className="container">
+			<div className="container" role="main">
 				<section className="card">
 					<div className="card--about">
 						<img
