@@ -32,7 +32,7 @@ li {
 /* base card styling */
 .card {
 	/* border: 1px solid white; */
-	margin: 100px auto;
+	margin: 150px auto;
 	max-width: 85%;
 	border-radius: 10px;
 	background-color: var(--background--2);
@@ -55,7 +55,6 @@ li {
 }
 
 /* Title styling */
-
 .card--name {
 	text-align: center;
 	color: var(--text--1);
@@ -85,7 +84,7 @@ li {
 /* card links */
 
 .card--list {
-	padding: 0;
+	padding: 0 0 2px 0;
 }
 
 .card--item :hover {
@@ -99,7 +98,7 @@ li {
 	color: var(--text--1);
 	/* border: 1px solid white; */
 	margin: 15px auto;
-	width: 85%;
+	width: 83%;
 	padding: 10px;
 	background-color: var(--background--1);
 	border-radius: 7px;
