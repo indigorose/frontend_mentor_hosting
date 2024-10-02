@@ -1,4 +1,7 @@
 /* Base Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
 *,
 *::before,
 *::after {
@@ -6,21 +9,57 @@
 }
 
 :root {
-	--text--1: hsl(0, 0%, 100%);
-	--highlight: hsl(75, 94%, 57%);
-	--background--1: hsl(0, 0%, 20%);
-	--background--2: hsl(0, 0%, 12%);
-	--background--3: hsl(0, 0%, 8%);
+	--color--1: hsl(0, 0%, 100%);
+	--Stone--100: hsl(30, 54%, 90%);
+	--Stone--150: hsl(30, 18%, 87%);
+	--Stone--600: hsl(30, 10%, 34%);
+	--Stone--900: hsl(24, 5%, 18%);
+	--Brown--800: hsl(14, 45%, 36%);
+	--Rose--800: hsl(332, 51%, 32%);
+	--Rose--50: hsl(330, 100%, 98%);
+	font-size: 16px;
+	font-family: 'Outfit', 'Young-Serif', Arial, Helvetica, sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-/* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+body {
+	background-color: var(--Stone--100);
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+.container {
+	border: 1px solid black;
+	background-color: var(--color--1);
+	width: 700px;
+	margin: 100px auto;
+	border-radius: 20px;
+}
+
+.container-card {
+	max-width: 90%;
+	margin: 5% auto;
+}
+
+.header-img {
+	border-radius: 15px;
+	max-width: 100%;
+}
+
+/* Preparation card */
+
+.preparation--card {
+	padding: 0.8rem 1.5rem;
+	background-color: var(--Rose--50);
+	border-radius: 15px;
+}
+
+.prep-title {
+	color: var(--Rose--800);
+}
+
+.prep-point {
+	padding: 0.5em;
+	color: var(--Stone--600);
+}
