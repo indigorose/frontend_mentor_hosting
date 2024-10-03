@@ -6,16 +6,16 @@ import { NutritionCard } from './NutritionCard';
 const RecipeCard = () => {
 	return (
 		<article className="container">
-			<section className="container-card">
+			<section className="container__card">
 				{/* Header */}
-				<div className="card-header">
+				<div className="card__header">
 					<img
-						className="header-img"
+						className="header__img"
 						src={recipeImg}
-						alt="portrait photo of Jessica"
+						alt="A landscape photo of an omelette with salad garnish."
 					/>
-					<h1 className="header-title">Simple Omelette Recipe</h1>
-					<p className="header-text">
+					<h1 className="header__title">Simple Omelette Recipe</h1>
+					<p className="header__text">
 						An easy and quick dish, perfect for any meal. The
 						classic omelette combines beaten eggs cooked to
 						perfection, optionally filled with your choice of
