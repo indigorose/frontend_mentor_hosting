@@ -12,7 +12,7 @@ const RecipeCard = () => {
 					<img
 						className="header__img"
 						src={recipeImg}
-						alt="A landscape photo of an omelette with salad garnish."
+						alt="A landscape photo of an omelette encasing a salad garnish."
 					/>
 					<h1 className="header__title">Simple Omelette Recipe</h1>
 					<p className="header__text">
