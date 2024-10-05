@@ -92,7 +92,7 @@ body {
 	font-family: 'Young Serif', Arial, Helvetica, sans-serif;
 }
 
-.ingredient__list {
+.card__instructions > ul {
 	padding: 1em 1.2em;
 	margin-top: 0;
 }

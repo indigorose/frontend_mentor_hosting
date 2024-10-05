@@ -5,7 +5,7 @@ import { InstructionsCard } from './InstructionsCard';
 import { NutritionCard } from './NutritionCard';
 const RecipeCard = () => {
 	return (
-		<article className="container">
+		<section className="container">
 			<section className="container__card">
 				{/* Header */}
 				<div className="card__header">
@@ -14,7 +14,7 @@ const RecipeCard = () => {
 						src={recipeImg}
 						alt="A landscape photo of an omelette encasing a salad garnish."
 					/>
-					<h1 className="header__title">Simple Omelette Recipe</h1>
+					<h2 className="header__title">Simple Omelette Recipe</h2>
 					<p className="header__text">
 						An easy and quick dish, perfect for any meal. The
 						classic omelette combines beaten eggs cooked to
@@ -27,7 +27,7 @@ const RecipeCard = () => {
 				<InstructionsCard />
 				<NutritionCard />
 			</section>
-		</article>
+		</section>
 	);
 };
 

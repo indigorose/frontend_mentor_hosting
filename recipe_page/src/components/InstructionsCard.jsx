@@ -3,7 +3,7 @@ export const InstructionsCard = () => {
 		<section className="card__instructions">
 			{/* Instructions Card */}
 			<h2 className="card__title">Instructions</h2>
-			<ul className="instructions__list">
+			<ul>
 				<ol type="1">
 					<li className="instruction__point">
 						<strong>Beat the eggs:</strong> In a bowl, beat the eggs

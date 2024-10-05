@@ -4,7 +4,7 @@ import './index.css';
 
 function App() {
 	return (
-		<div className="main" role="main" aria-description="main">
+		<div>
 			<RecipeCard />
 		</div>
 	);
