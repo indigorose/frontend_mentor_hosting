@@ -9,7 +9,7 @@ Please see the links below to the completed challenges.
 
 - Learning Path Solutions
   - Getting Started on Frontend Mentor
-    - QR code component
-    - Blog preview card
-    - Social links profile
-    - Recipe card
+    - [QR code component](https://github.com/indigorose/Frontend-Mentor-Projects/tree/main/QR_Code_Project/qr-code-component-main)
+    - [Blog preview card](https://github.com/indigorose/blog_preview_card)
+    - [Social links profile](https://github.com/indigorose/frontend_mentor_hosting/tree/main/social_links_profile)
+    - [Recipe card](https://github.com/indigorose/frontend_mentor_hosting/tree/main/recipe_page)
