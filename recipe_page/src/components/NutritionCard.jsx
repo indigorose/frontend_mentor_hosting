@@ -1,6 +1,6 @@
 export const NutritionCard = () => {
 	return (
-		<section className="card__nutrition">
+		<div className="card__nutrition">
 			{/* Nutrition Table Card */}
 			<h2 className="card__title">Nutrition</h2>
 			<p className="nutrition__text">
@@ -25,6 +25,6 @@ export const NutritionCard = () => {
 					<td>22g</td>
 				</tr>
 			</table>
-		</section>
+		</div>
 	);
 };

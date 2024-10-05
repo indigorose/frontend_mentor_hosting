@@ -5,8 +5,8 @@ import { InstructionsCard } from './InstructionsCard';
 import { NutritionCard } from './NutritionCard';
 const RecipeCard = () => {
 	return (
-		<section className="container">
-			<section className="container__card">
+		<div className="container">
+			<div className="container__card">
 				{/* Header */}
 				<div className="card__header">
 					<img
@@ -26,8 +26,8 @@ const RecipeCard = () => {
 				<IngredientsCard />
 				<InstructionsCard />
 				<NutritionCard />
-			</section>
-		</section>
+			</div>
+		</div>
 	);
 };
 

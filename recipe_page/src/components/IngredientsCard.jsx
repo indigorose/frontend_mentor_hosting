@@ -1,6 +1,6 @@
 export const IngredientsCard = () => {
 	return (
-		<section className="card__ingredient">
+		<div className="card__ingredient">
 			{/* Ingredients Card*/}
 			<h2 className="card__title">Ingredients</h2>
 			<ul className="ingredient__list">
@@ -15,6 +15,6 @@ export const IngredientsCard = () => {
 					herbs
 				</li>
 			</ul>
-		</section>
+		</div>
 	);
 };

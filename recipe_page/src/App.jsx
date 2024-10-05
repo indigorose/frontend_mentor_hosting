@@ -1,4 +1,3 @@
-import {} from 'react';
 import RecipeCard from './components/RecipeCard';
 import './index.css';
 
