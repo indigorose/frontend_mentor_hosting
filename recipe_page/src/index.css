@@ -36,6 +36,9 @@ body {
 
 .container {
 	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
 }
 
 .header__title {
@@ -47,16 +50,18 @@ body {
 }
 
 .header__text {
-	font-size: 1rem;
+	font-size: 0.8rem;
 	line-height: 1.5em;
+	color: var(--Stone--600);
 }
 
 .header__img {
 	width: 100%;
+	border-radius: 15px;
+	height: auto;
 }
 
 /* Preparation Card Styling */
-
 .card__preparation {
 	padding: 0.8em 1em;
 	background-color: var(--Rose--50);
@@ -65,9 +70,10 @@ body {
 
 .preparation__title {
 	color: var(--Rose--800);
-	padding: 0 1em;
+	padding: 0 0.8em;
 	margin: 8px 0 0 0;
 }
+
 .preparation__list {
 	padding: 1em 2.5em;
 	margin: 0;
@@ -77,11 +83,9 @@ body {
 .preparation__point {
 	padding: 0.4em 1.2em;
 	color: var(--Stone--600);
-	list-style-position: outside;
 }
 
 /* Ingredient Card Styling */
-
 .card__title {
 	color: var(--Brown--800);
 	margin: 20px 0 0 0;
@@ -128,6 +132,7 @@ body {
 	font-weight: 700;
 	font-family: 'Outfit';
 }
+
 .nutrition__text {
 	color: var(--Stone--600);
 	font-size: 0.8rem;
@@ -155,6 +160,8 @@ td {
 	line-height: 2.5rem;
 	font-size: 0.8rem;
 }
+
+/* Responsive Styling */
 @media (min-width: 725px) {
 	body {
 		background-color: var(--Stone--100);
@@ -167,22 +174,66 @@ td {
 
 	/* Article styling */
 	.container {
-		border: 1px solid black;
+		border: none;
 		background-color: var(--color--1);
 		width: 700px;
 		margin: 100px auto;
 		border-radius: 20px;
+		padding: 0.8em;
 	}
 
 	/* Header Card Styling */
-
 	.container__card {
-		max-width: 90%;
-		margin: 5% auto;
+		max-width: 95%;
+		margin: 1em auto;
 	}
+
 	.header__img {
 		border-radius: 15px;
 		max-width: 100%;
 		height: auto;
+	}
+}
+
+@media (max-width: 725px) {
+	.card__header {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.header__img {
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		height: auto;
+		margin-bottom: 1em;
+		border-radius: 0;
+	}
+
+	.header__title {
+		padding-top: 45%;
+		font-size: 1.8rem;
+		margin-bottom: 0;
+	}
+	.container {
+		padding: 20px;
+		overflow-y: auto; /* Enable scrolling if content overflows */
+	}
+
+	.preparation__title {
+		padding-left: 0.5rem;
+	}
+	.preparation__list {
+		padding-left: 1em;
+		margin-left: 2%;
+	}
+	.preparation__point {
+		padding-left: 2%;
+	}
+
+	/* Ensure the body allows scrolling */
+	body {
+		overflow-y: scroll; /* Enable scrolling for the page if content is taller than the viewport */
 	}
 }
