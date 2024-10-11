@@ -1,0 +1,28 @@
+:root {
+	/* Primary Colours */
+
+	--color--red: hsl(0, 78%, 62%);
+	--color--cyan: hsl(180, 62%, 55%);
+	--color--orange: hsl(34, 97%, 64%);
+	--color--blue: hsl(212, 86%, 64%);
+
+	/* Neutral Colours */
+
+	--color--very-dark-blue: hsl(234, 12%, 34%);
+	--color--grayish-blue: hsl(229, 6%, 66%);
+	--color--very-light-gray: hsl(0, 0%, 98%);
+
+	font-size: 15px;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600 */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
