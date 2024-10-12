@@ -117,6 +117,10 @@ body {
 	padding-right: 0.5em;
 }
 
+footer {
+	margin-top: 2em;
+}
+
 @media (width >= 59.375rem) {
 	.header__card {
 		max-width: 500px;
