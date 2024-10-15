@@ -37,7 +37,9 @@ Note for text colors:
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: Poppins, Arial, Helvetica, sans-serif;
+	font-family: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 *,
 *::before,
@@ -48,112 +50,11 @@ Note for text colors:
 body {
 	background-color: var(--color-light-grayish-blue);
 }
-.barlow-semi-condensed-thin {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 100;
-	font-style: normal;
-}
-
-.barlow-semi-condensed-extralight {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 200;
-	font-style: normal;
-}
-
-.barlow-semi-condensed-light {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 300;
-	font-style: normal;
-}
 
 .barlow-semi-condensed-regular {
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-weight: 400;
 	font-style: normal;
-}
-
-.barlow-semi-condensed-medium {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
-
-.barlow-semi-condensed-semibold {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 600;
-	font-style: normal;
-}
-
-.barlow-semi-condensed-bold {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 700;
-	font-style: normal;
-}
-
-.barlow-semi-condensed-extrabold {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 800;
-	font-style: normal;
-}
-
-.barlow-semi-condensed-black {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 900;
-	font-style: normal;
-}
-
-.barlow-semi-condensed-thin-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 100;
-	font-style: italic;
-}
-
-.barlow-semi-condensed-extralight-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 200;
-	font-style: italic;
-}
-
-.barlow-semi-condensed-light-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 300;
-	font-style: italic;
-}
-
-.barlow-semi-condensed-regular-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 400;
-	font-style: italic;
-}
-
-.barlow-semi-condensed-medium-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 500;
-	font-style: italic;
-}
-
-.barlow-semi-condensed-semibold-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 600;
-	font-style: italic;
-}
-
-.barlow-semi-condensed-bold-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 700;
-	font-style: italic;
-}
-
-.barlow-semi-condensed-extrabold-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 800;
-	font-style: italic;
-}
-
-.barlow-semi-condensed-black-italic {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 900;
-	font-style: italic;
 }
 
 .cards {
@@ -170,10 +71,33 @@ body {
 	border-radius: 8px;
 }
 
+/* Card Design */
+
 .card__header {
 	border: 1px solid green;
 	display: flex;
 	flex-direction: row;
+	padding: 0.2em;
+}
+
+.card__header img {
+	margin: 0 10px 0 0;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}
+
+.card__header h1 {
+	font-size: 0.8rem;
+}
+.card__header span {
+	opacity: 70%;
+}
+
+.card__text-bold {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-weight: 600;
+	font-style: normal;
 }
 
 /* Card background colours */
@@ -201,6 +125,8 @@ body {
 	background-color: var(--color-white);
 }
 
+/* Desktop layout changes */
+
 @media (width >= 59.375rem) {
 	.cards {
 		display: grid;
@@ -208,7 +134,7 @@ body {
 		grid-template-rows: 1fr 1fr;
 		gap: 0px 5px;
 		grid-auto-flow: row;
-		max-width: 800px;
+		max-width: 1200px;
 	}
 
 	.wrapper__1 {
