@@ -19,7 +19,6 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 /* - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
@@ -74,6 +73,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
+}
+
+.cards__wrapper {
+	max-width: 300px;
+	margin: 0 auto;
 }
 
 .card {
