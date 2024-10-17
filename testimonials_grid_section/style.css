@@ -39,7 +39,7 @@ Note for text colors:
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: 400;
 	font-style: normal;
-	font-family: 'Barlow Semi Condensed', sans-serif;
+	--font-family: 'Barlow Semi Condensed', sans-serif;
 }
 *,
 *::before,
@@ -51,24 +51,19 @@ body {
 	background-color: var(--color-light-grayish-blue);
 }
 
-.barlow-semi-condensed-regular {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 400;
-	font-style: normal;
-}
-
 .cards {
 	border: 1px solid black;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	max-width: 320px;
+	font-family: var(--font-family);
 }
 
 .card {
 	border: 1px solid red;
 	margin: 2rem auto;
-	padding: 2rem;
+	padding: 2rem 2rem;
 	border-radius: 8px;
 }
 
@@ -81,11 +76,16 @@ body {
 	padding: 0.2em;
 }
 
-.card__header img {
-	margin: 10px 10px;
+.card__profile-img {
+	margin: 10px 10px 10px 0;
 	border-radius: 50%;
 	height: 40px;
 	width: 40px;
+}
+
+.card__image {
+	position: relative;
+	margin: 0 auto;
 }
 
 .card__header h1 {
@@ -103,12 +103,14 @@ body {
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-weight: 500;
 	font-style: normal;
-	font-size: 1.538rem;
+	font-size: 1.57rem;
+	margin-top: 0.2rem;
 }
 
 .card__text {
 	opacity: 70%;
 	font-size: 1.077rem;
+	margin-bottom: 0;
 }
 /* Card background colours */
 .card__1 {
@@ -117,10 +119,12 @@ body {
 
 .card__2 {
 	background-color: var(--color-very-dark-grayish-blue);
+	margin-bottom: 0;
 }
 
 .card__4 {
 	background-color: var(--color-very-dark-blackish-blue);
+	margin-bottom: 0;
 }
 
 .card__1,
@@ -139,13 +143,15 @@ body {
 
 @media (width >= 59.375rem) {
 	.cards {
+		border: 1px solid blueviolet;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		gap: 0px 5px;
 		grid-auto-flow: row;
 		max-width: 1200px;
-		height: 700px;
+		height: 70%;
+		white-space: wrap;
 	}
 
 	.wrapper__1 {
