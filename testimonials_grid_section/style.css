@@ -32,13 +32,12 @@ Note for text colors:
 
 	--color-light-gray: hsl(0, 0%, 81%);
 	--color-light-grayish-blue: hsl(210, 46%, 95%);
-	font-size: 13px;
+
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-weight: 400;
-	font-style: normal;
+
 	--font-family: 'Barlow Semi Condensed', sans-serif;
 }
 *,
@@ -49,82 +48,92 @@ Note for text colors:
 
 body {
 	background-color: var(--color-light-grayish-blue);
+	font-family: var(--font-family);
+	font-size: 13px;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
 }
 
+.container {
+	margin: 0 2rem;
+}
 .cards {
-	border: 1px solid black;
-	margin: 0 auto;
+	/* border: 1px solid black; */
+	margin: 10rem auto;
 	display: flex;
 	flex-direction: column;
-	max-width: 320px;
+	gap: 2rem;
 	font-family: var(--font-family);
 }
 
 .card {
-	border: 1px solid red;
-	margin: 2rem auto;
-	padding: 2rem 2rem;
+	/* border: 1px solid red; */
+	padding: 2rem;
 	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 /* Card Design */
 
 .card__header {
-	border: 1px solid green;
+	/* border: 1px solid green; */
 	display: flex;
 	flex-direction: row;
-	padding: 0.2em;
+	margin: 0;
 }
 
 .card__profile-img {
-	margin: 10px 10px 10px 0;
+	margin: 0;
 	border-radius: 50%;
 	height: 40px;
 	width: 40px;
 }
 
-.card__image {
-	position: relative;
-	margin: 0 auto;
+.card__header > div {
+	margin: 0.2rem 0.5rem;
 }
 
-.card__header h1 {
-	margin: 10px 0;
+.name {
 	font-size: 1rem;
-	vertical-align: middle;
-	line-height: 1.5rem;
+	line-height: 1rem;
+	margin: 0;
 }
-.card__header span {
+.position {
+	margin: 0;
 	opacity: 70%;
 	font-weight: 400;
 }
 
 .card__text-bold {
-	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-weight: 500;
 	font-style: normal;
-	font-size: 1.57rem;
-	margin-top: 0.2rem;
+	font-size: 1.3rem;
+	margin: 0;
 }
 
 .card__text {
 	opacity: 70%;
-	font-size: 1.077rem;
-	margin-bottom: 0;
+	font-size: 0.9rem;
+	margin: 0;
 }
+
 /* Card background colours */
 .card__1 {
 	background-color: var(--color-moderate-violet);
+	background-image: url('./images/bg-pattern-quotation.svg');
+	background-repeat: no-repeat;
+	background-position: top right 10%;
 }
 
 .card__2 {
 	background-color: var(--color-very-dark-grayish-blue);
-	margin-bottom: 0;
 }
 
 .card__4 {
 	background-color: var(--color-very-dark-blackish-blue);
-	margin-bottom: 0;
 }
 
 .card__1,
@@ -143,44 +152,23 @@ body {
 
 @media (width >= 59.375rem) {
 	.cards {
-		border: 1px solid blueviolet;
+		/* border: 1px solid blueviolet; */
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		gap: 0px 5px;
-		grid-auto-flow: row;
-		max-width: 1200px;
-		height: 70%;
-		white-space: wrap;
-	}
-
-	.wrapper__1 {
-		display: grid;
-		grid-template-columns: 1.2fr 0.8fr;
-		grid-template-rows: 1fr;
-		gap: 0px 5px;
-		grid-auto-flow: row;
-		grid-area: 1 / 1 / 2 / 3;
-	}
-
-	.wrapper__2 {
-		display: grid;
-		grid-template-columns: 0.6fr 1.4fr;
-		grid-template-rows: 1fr;
-		gap: 0px 5px;
-		grid-auto-flow: row;
-		grid-area: 2 / 1 / 3 / 3;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+		padding-block: 2rem;
+		width: min(95% 70rem);
 	}
 
 	.card__1,
-	.card__2,
-	.card__3,
 	.card__4 {
-		height: 350px;
+		grid-column: span 2;
 	}
 
+	/* experiment with last child selector */
 	.card__5 {
-		grid-area: 1 / 3 / 3 / 4;
-		width: 270px;
+		grid-column-start: 4;
+		grid-row-start: 1;
+		grid-row-end: span 2;
 	}
 }
