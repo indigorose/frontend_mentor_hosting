@@ -1,6 +1,6 @@
 # Frontend Mentor - Testimonials grid section solution
 
-This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -14,9 +14,6 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,20 +25,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop Version](./images/Desktop%20Screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Mobile Version](./images/Mobile%20View%20Screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/indigorose/frontend_mentor_hosting/tree/main/testimonials_grid_section)
+- Live Site URL: [Live Site](https://lovely-puffpuff-d5d65c.netlify.app/)
 
 ## My process
 
@@ -52,59 +43,34 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This challenge definitely pushed my knowledge of `grid` and positioning of the testimonial cards.
 
-To see how you can add code snippets, see below:
+In the mobile view, it was simple to use flexbox and `flex-direction: column` for the initial card layout.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+However the issue came when wanted to use grid. I have previously used the site [Layoutit!](https://grid.layoutit.com/) to design my grid designs.
+At first I thought the horizontal cards would be contained within their own `div` with the fifth card being vertical on the end.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+This took a long time to correct as doing so created various width and height card sizes. It wasn't until I stumbled on a css video about grid that finally helped and I was able to refactor my code removing the unnecessary parent child container elements and more seamless design.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+As I completed the challenge without using figma files, this is as close I could get.
+
+I am also building on my css custom properties, I mainly use them for the colourways, as it can become tedious typing out hsl colours for each html element.
+
+Maybe with the next I will look into SASS and Tailwind.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Will look at using more grid style challenges and designs going forward to understand `span` and `grid-area` on bento style layouts.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Learn CSS Grid the easy way](https://youtu.be/rg7Fvvl3taU?si=LgBMYVQxW4URRQk8) - This helped with the bento layout in the desktop view and the simplification of my html layout. I have watched Kevin's other videos in the past and his intro to responsive layouts in the past. I will probably revisit.
+- [Layoutit!](https://grid.layoutit.com/) - This is my initial site that I use for my grid layouts, I will continue to use and experiment to develop my grid knowledge.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@indigorose](https://www.frontendmentor.io/profile/indigorose)
+- Twitter - [@Coding_Indigo](https://twitter.com/Coding_Indigo)
