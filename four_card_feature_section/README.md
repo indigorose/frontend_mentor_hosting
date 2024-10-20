@@ -12,7 +12,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+
 - [Author](#author)
 
 ## Overview
@@ -45,9 +45,22 @@ Users should be able to:
 
 ### What I learned
 
+This challenge extended my knowledge of flexbox. The initial mobile or small screen styling kept the flexbox of the four cards simple at
+
+```css
+.container {
+  display: flex;
+  flex-direction: column;
+}
+ ```
+
+When working on the desktop version, the middle cards were placed within a wrapper to maintain the column flex direction with the container moving the `flex-direction: row;` layout.
+
 ### Continued development
 
-### Useful resources
+Again these are basic initial designs and as the complexity of the challenges grow, CSS grid will probably become the more dominant layout feature.
+
+The next challenge focuses on CSS grid for the desktop layout.
 
 ## Author
 
