@@ -51,6 +51,7 @@ This challenge definitely pushed my knowledge of `grid` and positioning of the t
 In the mobile view, it was simple to use flexbox and `flex-direction: column` for the initial card layout.
 
 However the issue came when wanted to use grid. I have previously used the site [Layoutit!](https://grid.layoutit.com/) to design my grid designs.
+
 At first I thought the horizontal cards would be contained within their own `div` with the fifth card being vertical on the end.
 
 This took a long time to correct as doing so created various width and height card sizes. It wasn't until I stumbled on a css video about grid that finally helped and I was able to refactor my code removing the unnecessary parent child container elements and more seamless design.

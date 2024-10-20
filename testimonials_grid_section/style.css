@@ -55,6 +55,11 @@ body {
 	margin: 0;
 }
 
+h1 {
+	font-size: 1rem;
+	margin-bottom: 2rem;
+}
+
 .container {
 	margin: 0 2rem;
 }
