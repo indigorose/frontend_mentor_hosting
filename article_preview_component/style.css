@@ -34,3 +34,73 @@ We provide SVGs for the social icons. But please feel free to use a font icon li
 - [Font Awesome](https://fontawesome.com)
 - [IcoMoon](https://icomoon.io)
 - [Ionicons](https://ionicons.com) */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+:root {
+	--color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+	--color-desaturated-darkblue: hsl(214, 17%, 51%);
+	--color-grayish-blue: hsl(212, 23%, 69%);
+	--color-light-grayish-blue: hsl(210, 46%, 95%);
+	font-size: 12px;
+	--font-family: 'Manrope', sans-serif;
+	--font-weight-normal: 400;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--color-light-grayish-blue);
+	font-family: var(--font-family);
+	font-weight: var(--font-weight-normal);
+	margin: 0;
+}
+
+.card {
+	border: 1px solid black;
+	width: 300px;
+	margin: 5rem auto;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+
+.card__image {
+	width: 100%;
+	height: auto;
+}
+
+.share {
+	border: 1px solid black;
+	display: none;
+}
+
+.quote {
+	margin: 0 2.3rem;
+	padding: 0;
+	color: var(--color-very-dark-grayish-blue);
+}
+
+.text {
+	margin: 0 2.3rem;
+	padding: 0;
+	color: var(--color-very-dark-grayish-blue);
+	opacity: 80%;
+	line-height: 1.5;
+	font-size: 1.05rem;
+}
+
+.profile {
+	border: 1px solid red;
+}
+
+.profile img {
+	width: 100%;
+	border-radius: 50%;
+}
