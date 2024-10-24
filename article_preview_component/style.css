@@ -53,6 +53,7 @@ We provide SVGs for the social icons. But please feel free to use a font icon li
 *::before,
 *::after {
 	box-sizing: border-box;
+	margin: 0;
 }
 
 body {
@@ -100,9 +101,27 @@ body {
 	border: 1px solid red;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	padding: 1rem;
 }
 
-.profile img {
-	width: 100%;
+.profile__img {
+	display: block;
+	margin: 0 auto;
+	width: 70%;
 	border-radius: 50%;
+}
+
+.profile__text {
+	grid-column: span 2;
+}
+
+.button {
+	border: 1px solid blue;
+	background-color: var(--color-light-grayish-blue);
+	border-radius: 50%;
+	padding: 0.8rem;
+	display: block;
+	margin: 0 auto;
+	width: 55%;
 }
