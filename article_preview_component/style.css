@@ -115,19 +115,19 @@ body {
 	font-weight: 700;
 }
 
-.button {
+.share-button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--color-light-grayish-blue);
 	border-radius: 50%;
-	height: 3rem;
-	width: 3rem;
+	height: 2.5rem;
+	width: 2.5rem;
 	margin: 0 auto;
 	border: none;
 }
 
-.button:hover {
+.share-button:hover {
 	background-color: var(--color-desaturated-darkblue);
 }
 
@@ -140,6 +140,16 @@ body {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	padding: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.share__text {
+	font-family: 'Manrope', sans-serif;
+	color: var(--color-light-grayish-blue);
+	margin: 0 auto;
+	letter-spacing: 0.5rem;
+	display: block;
 }
 
 .share__icons {
