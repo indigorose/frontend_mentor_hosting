@@ -11,67 +11,96 @@
 			sizes="32x32"
 			href="./images/favicon-32x32.png"
 		/>
-
-		<title>Frontend Mentor | Article preview component</title>
+		<title>Frontend Mentor | Article Preview Component</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<main class="container attribution" aria-roledescription="contentinfo">
-			<article class="card">
-				<img
-					class="card__image"
-					src="./images/drawers.jpg"
-					alt="A green chest of drawers with a vase and two images on top."
-				/>
-				<h1 class="quote">
-					Shift the overall look and feel by adding these wonderful
-					touches to furniture in your home
-				</h1>
-				<p class="text">
-					Ever been in a room and felt like something was missing?
-					Perhaps it felt slightly bare and uninviting. I’ve got some
-					simple tips to help you make any room feel complete.
-				</p>
-				<div class="profile">
+			<article class="article__card">
+				<!-- Image container -->
+				<div class="article__card--image-container">
 					<img
-						class="profile__img"
-						src="./images/avatar-michelle.jpg"
-						alt="A profile picture of Michelle Appleton."
+						class="card__image"
+						src="./images/drawers.jpg"
+						alt="A green chest of drawers with a vase and two images on top."
 					/>
-					<div class="profile__text">
-						<p class="profile__title">Michelle Appleton</p>
-						<p>28 Jun 2020</p>
-					</div>
-					<div class="share-button">
-						<img
-							src="./images/icon-share.svg"
-							alt="share icon"
-							class="icon"
-						/>
-					</div>
 				</div>
-				<div class="share">
-					<p class="share__text">SHARE</p>
-					<div class="share__icons">
+				<div class="article__card--text-container">
+					<h1 class="text-container-heading">
+						Shift the overall look and feel by adding these
+						wonderful touches to furniture in your home
+					</h1>
+					<p class="text-container-preview">
+						Ever been in a room and felt like something was missing?
+						Perhaps it felt slightly bare and uninviting. I’ve got
+						some simple tips to help you make any room feel
+						complete.
+					</p>
+					<div class="profile__container" id="profile-container">
 						<img
-							src="./images/icon-facebook.svg"
-							alt="icon-facebook"
+							class="profile__img profile__img-desktop"
+							src="./images/avatar-michelle.jpg"
+							alt="A profile picture of Michelle Appleton."
 						/>
-						<img
-							src="./images/icon-twitter.svg"
-							alt="icon-twitter"
-						/>
-						<img
-							src="./images/icon-pinterest.svg"
-							alt="icon-pinterest"
-						/>
+						<div class="profile__text">
+							<p class="profile__title">Michelle Appleton</p>
+							<p>28 Jun 2020</p>
+						</div>
+						<!-- Share box - Desktop version -->
+						<div class="sharebox__desktop">
+							<p class="share__text">SHARE</p>
+							<div class="share__icons">
+								<img
+									src="./images/icon-facebook.svg"
+									alt="icon-facebook"
+								/>
+								<img
+									src="./images/icon-twitter.svg"
+									alt="icon-twitter"
+								/>
+								<img
+									src="./images/icon-pinterest.svg"
+									alt="icon-pinterest"
+								/>
+							</div>
+						</div>
+						<!-- Share button -->
+						<div
+							class="share-button share__btn-desktop"
+							id="share-button-desktop"
+						>
+							<img
+								src="./images/icon-share.svg"
+								alt="share arrow icon"
+								class="icon"
+							/>
+						</div>
 					</div>
-					<div class="button share-button">
-						<img
-							src="./images/icon-share.svg"
-							alt="share icon"
-							class="icon"
-						/>
+					<!-- Share box - Desktop version -->
+					<!-- Share box - Mobile version -->
+					<div class="sharebox__mobile" id="sharebox-mobile">
+						<sp class="sharebox__text">SHARE</sp>
+						<div class="sharebox__icons">
+							<img
+								src="./images/icon-facebook.svg"
+								alt="icon-facebook"
+							/>
+							<img
+								src="./images/icon-twitter.svg"
+								alt="icon-twitter"
+							/>
+							<img
+								src="./images/icon-pinterest.svg"
+								alt="icon-pinterest"
+							/>
+						</div>
+						<div class="share-button-mobile button-after">
+							<img
+								src="./images/icon-share.svg"
+								alt="share icon"
+								class="icon"
+							/>
+						</div>
 					</div>
 				</div>
 			</article>

@@ -54,50 +54,65 @@ We provide SVGs for the social icons. But please feel free to use a font icon li
 *::after {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 body {
 	background-color: var(--color-light-grayish-blue);
 	font-family: var(--font-family);
 	font-weight: var(--font-weight-normal);
-	margin: 0;
 }
 
-.card {
+/* Main article card */
+.article__card {
 	border: 1px solid black;
+	border-radius: 10px;
 	width: 300px;
 	margin: 5rem auto;
 	display: flex;
 	flex-direction: column;
 	background-color: white;
+	/* overflow: hidden; */
 }
+
+/* Mobile image card container styling */
 
 .card__image {
 	width: 100%;
 	height: auto;
 }
 
-.quote {
-	margin: 0 2.3rem;
-	padding: 0;
-	color: var(--color-very-dark-grayish-blue);
+/* Mobile text card container styling */
+.article__card--text-container {
+	padding: 2em;
+	margin: 0 auto;
 }
 
-.text {
-	margin: 0 2.3rem;
+.text-container-heading {
 	padding: 0;
+	color: var(--color-very-dark-grayish-blue);
+	width: 25ch;
+	font-size: 1.2rem;
+}
+
+.text-container-preview {
+	padding: 1em 0;
+	width: 32ch;
 	color: var(--color-very-dark-grayish-blue);
 	opacity: 80%;
+	font-weight: 400;
 	line-height: 1.5;
-	font-size: 1.05rem;
+	font-size: 1rem;
 }
 
-.profile {
+.profile__container {
 	border: 1px solid red;
-	display: none;
+	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
-	padding: 1rem;
+
+	justify-content: center;
+	align-items: center;
 }
 
 .profile__img {
@@ -127,24 +142,25 @@ body {
 	border: none;
 }
 
-.share-button:hover {
-	background-color: var(--color-desaturated-darkblue);
-}
-
 .icon path:hover {
 	fill: white;
 }
-.share {
-	border: 1px solid black;
+.sharebox__desktop {
+	display: none;
+}
+
+.sharebox__mobile {
+	display: none;
+	/* border: 1px solid black;
 	background-color: var(--color-very-dark-grayish-blue);
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	padding: 1rem;
 	justify-content: center;
-	align-items: center;
+	align-items: center; */
 }
 
-.share__text {
+.sharebox__text {
 	font-family: 'Manrope', sans-serif;
 	color: var(--color-light-grayish-blue);
 	margin: 0 auto;
@@ -152,9 +168,95 @@ body {
 	display: block;
 }
 
-.share__icons {
+.sharebox__icons {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	justify-content: space-evenly;
 	vertical-align: middle;
+}
+
+@media (width >= 46.875rem) {
+	.article__card {
+		width: 700px;
+		height: 250px;
+		margin: 5rem auto;
+		box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
+		display: flex;
+		flex-direction: row;
+	}
+
+	/* Main image styling */
+	.article__card--image-container {
+		width: fit-content;
+		border: 1px solid green;
+		border-radius: 10px 0 0 10px;
+		overflow: hidden;
+	}
+	.card__image {
+		display: block;
+		width: 300px;
+		height: 250px;
+	}
+
+	/* Text styling */
+
+	.article__card--text-container {
+		padding: 2.5em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.text-container-heading {
+		font-size: 1.5rem;
+		letter-spacing: 0.3px;
+	}
+
+	.text-container-preview {
+		width: 45ch;
+	}
+	.profile__img-desktop {
+		width: 40px;
+	}
+
+	.share__button-desktop {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+	}
+
+	.profile__container {
+		position: relative;
+	}
+	.sharebox__desktop {
+		border-radius: 7px;
+		width: 200px;
+		height: 40px;
+		box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
+		position: absolute;
+		display: flex;
+		background-color: var(--color-very-dark-grayish-blue);
+		left: 215px;
+		top: -70px;
+	}
+
+	.share__text {
+		font-family: 'Manrope', sans-serif;
+		color: var(--color-light-grayish-blue);
+		font-size: 13px;
+		text-transform: uppercase;
+		font-weight: 500;
+		line-height: 20px;
+		letter-spacing: 5px;
+	}
+
+	.share__icons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 1.2rem;
+		column-gap: 20px;
+	}
 }
