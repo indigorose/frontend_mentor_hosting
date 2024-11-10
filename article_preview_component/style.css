@@ -110,7 +110,6 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
-
 	justify-content: center;
 	align-items: center;
 }
@@ -120,10 +119,12 @@ body {
 	margin: 0 auto;
 	width: 70%;
 	border-radius: 50%;
+	margin-left: 5px;
 }
 
 .profile__text {
 	grid-column: span 2;
+	margin-left: -25px;
 	color: var(--color-very-dark-grayish-blue);
 }
 .profile__title {
@@ -140,24 +141,26 @@ body {
 	width: 2.5rem;
 	margin: 0 auto;
 	border: none;
+	cursor: pointer;
 }
 
 .icon path:hover {
 	fill: white;
 }
+
 .sharebox__desktop {
 	display: none;
 }
 
 .sharebox__mobile {
-	display: none;
-	/* border: 1px solid black;
+	display: grid;
+	border: 1px solid black;
 	background-color: var(--color-very-dark-grayish-blue);
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	padding: 1rem;
 	justify-content: center;
-	align-items: center; */
+	align-items: center;
 }
 
 .sharebox__text {
@@ -176,6 +179,11 @@ body {
 }
 
 @media (width >= 46.875rem) {
+	/* Share section control */
+
+	.is-visible {
+		display: block !important;
+	}
 	.article__card {
 		width: 700px;
 		height: 250px;
@@ -231,15 +239,25 @@ body {
 		position: relative;
 	}
 	.sharebox__desktop {
+		display: none;
 		border-radius: 7px;
 		width: 200px;
 		height: 40px;
-		box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
+		box-shadow: 0px 40px 40px -10px rgba(161, 164, 168, 0.327);
 		position: absolute;
-		display: flex;
+		padding: 1em;
 		background-color: var(--color-very-dark-grayish-blue);
 		left: 215px;
-		top: -70px;
+		top: -55px;
+	}
+
+	.sharebox__container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		gap: 1em;
 	}
 
 	.share__text {
@@ -256,7 +274,6 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-top: 1.2rem;
-		column-gap: 20px;
+		column-gap: 10px;
 	}
 }
