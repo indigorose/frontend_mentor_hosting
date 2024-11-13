@@ -114,7 +114,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.8rem;
 }
 
 .profile__img-mobile {
@@ -134,7 +134,7 @@ body {
 	font-weight: 700;
 }
 
-.share-button {
+.share__button-mobile {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -148,13 +148,12 @@ body {
 }
 
 .sharebox__mobile {
-	display: grid;
 	border: 1px solid black;
 	background-color: var(--color-very-dark-grayish-blue);
-	display: grid;
+	display: none;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
-	padding: 1rem;
+	padding: 0.8rem 1.5rem;
 	justify-content: center;
 	align-items: center;
 }
@@ -172,7 +171,22 @@ body {
 	grid-template-columns: repeat(3, 1fr);
 	justify-content: space-evenly;
 	vertical-align: middle;
+	align-items: center;
 	grid-column: span 2;
+	padding: 0 1rem;
+}
+
+.sharebox__button-mobile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-grayish-blue);
+	border-radius: 50%;
+	height: 2.5rem;
+	width: 2.5rem;
+	margin: 0 auto;
+	border: none;
+	cursor: pointer;
 }
 
 .share__button-mobile {
@@ -190,6 +204,8 @@ body {
 .mobile__icon {
 	color: white;
 }
+
+/* Desktop display Styling */
 
 @media (width >= 46.875rem) {
 	/* Share section control */
