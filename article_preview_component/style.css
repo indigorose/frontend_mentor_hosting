@@ -72,7 +72,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: white;
-	overflow: hidden;
+	position: relative;
+	/* overflow: hidden; */
 }
 
 /* Mobile image card container styling */
@@ -207,6 +208,7 @@ body {
 		display: flex;
 		flex-direction: row;
 		position: relative;
+		z-index: 1;
 	}
 
 	/* Main image styling */
@@ -306,6 +308,7 @@ body {
 		background-color: var(--color-very-dark-grayish-blue);
 		left: 215px;
 		top: -70px;
+		z-index: 10;
 	}
 
 	.sharebox__container {
