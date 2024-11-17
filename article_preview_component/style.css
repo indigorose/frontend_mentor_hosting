@@ -81,6 +81,7 @@ body {
 .card__image {
 	width: 100%;
 	height: auto;
+	border-radius: 10px 10px 0 0;
 }
 
 /* Mobile text card container styling */
@@ -155,6 +156,7 @@ body {
 	padding: 0.8rem 1.5rem;
 	justify-content: center;
 	align-items: center;
+	border-radius: 0 0 10px 10px;
 }
 
 .sharebox__text-mobile {
@@ -179,7 +181,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--color-grayish-blue);
+	background-color: var(--color-desaturated-darkblue);
 	border-radius: 50%;
 	height: 2.5rem;
 	width: 2.5rem;
@@ -188,7 +190,7 @@ body {
 	cursor: pointer;
 }
 
-.mobile__icon {
+.mobile__btn {
 	color: white;
 }
 

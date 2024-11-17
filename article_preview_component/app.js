@@ -1,11 +1,21 @@
 // Desktop share button interaction
 const shareButtonDesktop = document.getElementById('share-button-desktop');
+const svgPath = shareButtonDesktop.querySelector('svg path');
 
 shareButtonDesktop.addEventListener('click', toggleDesktopShare);
 
 function toggleDesktopShare() {
 	const shareboxDesktop = document.querySelector('.sharebox__desktop');
 	shareboxDesktop.classList.toggle('is-visible');
+
+	// Toggle the fill color of the SVG path
+	if (svgPath.getAttribute('fill') === '#6E8098') {
+		svgPath.setAttribute('fill', '#ecf2f8');
+		shareButtonDesktop.style.backgroundColor = 'hsl(214, 17%, 51%)';
+	} else {
+		svgPath.setAttribute('fill', '#6E8098');
+		shareButtonDesktop.style.backgroundColor = 'hsl(210, 46%, 95%)'; // Revert back to original color
+	}
 }
 
 // Mobile share bar interaction
