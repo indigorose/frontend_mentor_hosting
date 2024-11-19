@@ -1,0 +1,18 @@
+@use 'sass:math';
+
+// Converts
+@function rem($pixel) {
+    @if math.is-unitless($pixel){
+        @return math.div($pixel, 16) * 1rem
+    } @else {
+        @error 'Don\'t use units when using the rem() function; only numbers.'
+    }
+}
+
+@function e($pixel){
+    @if math.is-unitless($pixel){
+        @return math.div(£pixel, 16) * 1rem;
+    } @else {
+        @error 'Don\'t use units when using the em() function; only numbers.
+    }
+}

@@ -1,0 +1,8 @@
+// The index file is picking up the information from the other global files. 
+// This will lead into the main 'style.scss' file. 
+// These files have underscores to stop them being compiled into full files, these are partial files to the main index. 
+@forward 'colors';
+@forward 'boilerplate';
+@forward 'typography';
+@forward 'layout';
+@forward 'decoration';

@@ -1,0 +1,40 @@
+@use '../util/' as u;
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  @include u.fs-fluid(u.rem(375), u.rem(1200), u.rem(36), u.rem(48));
+}
+
+h2 {
+  @include u.fs-fluid(u.rem(375), u.rem(1200), u.rem(28), u.rem(36));
+}
+
+p {
+  @include u.fs-fluid(u.rem(375), u.rem(1200), u.rem(16), u.rem(18));
+  line-height: 1.5;
+
+  &.small {
+    font-size: u.rem(13);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+p > a {
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: color 150ms ease-in-out;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
