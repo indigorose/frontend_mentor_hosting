@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('./assets/fonts/Roboto-Bold.ttf');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('./assets/fonts/Roboto-Regular.ttf');
+	font-weight: normal;
+}
+
+/* Mobile Styling */
+
+/* Desktop Styling */
+@media (width >= 59.375rem) {
+}

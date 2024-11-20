@@ -4,30 +4,88 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Newsletter sign-up form with success message</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!-- Sign-up form start mobile version -->
+		<!-- Sign-up form start-->
 
 		<main
 			class="attribution container_mobile"
 			aria-roledescription="contentinfo"
 		>
-			wrapper__image-mobile
+			<div class="wrapper">
+				<div class="wrapper__image">
+					<img
+						class="image__mobile"
+						src="./assets/images/illustration-sign-up-mobile.svg"
+						alt="Sign up image"
+					/>
+					<img
+						class="image__desktop"
+						src="./assets/images/illustration-sign-up-desktop.svg"
+						alt="Sign up image"
+					/>
+				</div>
+				<div class="wrapper__text">
+					<h1 class="wrapper__heading">Stay updated!</h1>
+					<p class="wrapper__subtext">
+						Join 60,000+ product managers receiving monthly updates
+						on:
+					</p>
+					<ul class="wrapper__list">
+						<li class="wrapper__list-item">
+							Product discovery and building what matters
+						</li>
+						<li class="wrapper__list-item">
+							Measuring to ensure updates are a success
+						</li>
+						<li class="wrapper__list-item">And much more!</li>
+					</ul>
+					<form action="" class="wrapper__form">
+						<p>Email address</p>
+						<input
+							type="email"
+							name="Email"
+							id="Email"
+							placeholder="email@company.com"
+						/>
+						<button
+							type="submit"
+							class="form__submit-btn"
+							onclick="changeCard()"
+						>
+							Subscribe to monthly newsletter
+						</button>
+					</form>
+				</div>
+			</div>
 		</main>
 
-		Stay updated! Join 60,000+ product managers receiving monthly updates
-		on: Product discovery and building what matters Measuring to ensure
-		updates are a success And much more! Email address email@company.com
-		Subscribe to monthly newsletter
-
-		<!-- Sign-up form end -->
+		<!-- Sign-up form end  -->
 
 		<!-- Success message start -->
-
-		Thanks for subscribing! A confirmation email has been sent to
-		ash@loremcompany.com. Please open it and click the button inside to
-		confirm your subscription. Dismiss message
-
+		<div class="wrapper__success-card">
+			<div class="success__image">
+				<img
+					src="./assets/images/icon-success.svg"
+					alt="White tick on orange background"
+				/>
+			</div>
+			<h1 class="success-heading">Thanks for subscribing!</h1>
+			<p class="success__text">
+				A confirmation email has been sent to
+				<span class="bold-text">ash@loremcompany.co</span>. Please open
+				it and click the button inside to confirm your subscription.
+			</p>
+			<button
+				type="submit"
+				class="success__btn-return"
+				id="btn-return"
+				onclick="changeCard()"
+			>
+				Dismiss message
+			</button>
+		</div>
 		<!-- Success message end -->
 
 		<div class="footer">
@@ -39,4 +97,5 @@
 			>. Coded by <a href="#">Your Name Here</a>.
 		</div>
 	</body>
+	<script src="app.js"></script>
 </html>
