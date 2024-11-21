@@ -9,7 +9,50 @@
 	font-weight: normal;
 }
 
+/* Base styling */
+:root {
+	/* Primary */
+
+	--color-primary-tomato: hsl(4, 100%, 67%);
+
+	/* Neutral */
+
+	--color-neutral-Dark-Slate-Grey: hsl(234, 29%, 20%);
+	--color-neutral-Charcoal-Grey: hsl(235, 18%, 26%);
+	--color-neutral-Grey: hsl(231, 7%, 60%);
+	--color-neutral-White: hsl(0, 0%, 100%);
+
+	font-size: 16px;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600 */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', 'Roboto-Bold', sans-serif;
+	font-size: 16px;
+	margin: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
 /* Mobile Styling */
+
+.image__desktop {
+	display: none;
+}
 
 /* Desktop Styling */
 @media (width >= 59.375rem) {
