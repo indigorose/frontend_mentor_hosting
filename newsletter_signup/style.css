@@ -1,6 +1,8 @@
 @font-face {
 	font-family: 'Roboto-Bold';
+	font-size: 2.5rem;
 	src: url('./assets/fonts/Roboto-Bold.ttf');
+
 	font-weight: bold;
 }
 @font-face {
@@ -52,6 +54,23 @@ img {
 
 .image__desktop {
 	display: none;
+}
+
+.wrapper__text {
+	border: 1px solid black;
+	padding: 1rem;
+}
+.wrapper__heading {
+	font-family: 'Roboto-Bold';
+	font-size: 2.5rem;
+}
+
+.wrapper__list {
+	list-style-image: url(./assets/images/icon-list.svg);
+}
+
+.wrapper__list-item {
+	text-align: left;
 }
 
 /* Desktop Styling */
