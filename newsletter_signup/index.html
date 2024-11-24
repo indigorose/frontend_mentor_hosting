@@ -41,19 +41,26 @@
 						</li>
 						<li class="wrapper__list-item">And much more!</li>
 					</ul>
-					<form action="" class="wrapper__form">
-						<p>Email address</p>
+					<form
+						action=""
+						class="wrapper__form"
+						onsubmit="return validateEmail()"
+					>
+						<p>
+							Email address
+							<span
+								id="form__error-message"
+								class="form__error-message"
+							></span>
+						</p>
 						<input
 							type="email"
 							name="Email"
 							id="Email"
+							class="email"
 							placeholder="email@company.com"
 						/>
-						<button
-							type="submit"
-							class="form__submit-btn"
-							onclick="changeCard()"
-						>
+						<button type="submit" class="form__submit-btn">
 							Subscribe to monthly newsletter
 						</button>
 					</form>

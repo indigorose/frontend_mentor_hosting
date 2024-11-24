@@ -58,7 +58,7 @@ img {
 
 .wrapper__text {
 	border: 1px solid black;
-	padding: 1rem;
+	padding: 2rem;
 }
 .wrapper__heading {
 	font-family: 'Roboto-Bold';
@@ -66,11 +66,77 @@ img {
 }
 
 .wrapper__list {
-	list-style-image: url(./assets/images/icon-list.svg);
+	list-style: none;
+	padding: 1rem 0;
+	margin: 0;
 }
 
 .wrapper__list-item {
-	text-align: left;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 0.5rem;
+	line-height: 1.5rem;
+}
+
+.wrapper__list-item::before {
+	border: 1px solid black;
+	content: '';
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background-image: url(./assets/images/icon-list.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.wrapper__form > p {
+	font-size: 0.8rem;
+	font-family: 'Roboto-Bold', sans-serif;
+	color: var(--color-neutral-Dark-Slate-Grey);
+	display: flex;
+	flex-direction: row;
+	gap: 110px;
+}
+
+.email {
+	width: 100%;
+	padding: 1rem 1rem;
+	outline: none;
+	border-radius: 7px;
+	border: 1px solid var(--color-neutral-Grey);
+}
+
+::placeholder {
+	color: var(--color-neutral-Grey);
+	font-size: 1rem;
+}
+
+/* Invalid email fix */
+.form__error-message {
+	color: var(--color-primary-tomato);
+	font-size: 0.8rem;
+	display: none;
+}
+
+.form__input-error {
+	border: 2px solid var(--color-primary-tomato);
+	background-color: var(--color-primary-tomato);
+}
+
+.form__submit-btn {
+	margin-top: 1.5rem;
+	padding: 1rem;
+	text-align: center;
+	width: 100%;
+	font-family: 'Roboto-Bold';
+	font-size: 1rem;
+	background-color: var(--color-neutral-Dark-Slate-Grey);
+	color: var(--color-neutral-White);
+	outline: none;
+	border: none;
+	border-radius: 7px;
+	cursor: pointer;
 }
 
 /* Desktop Styling */
