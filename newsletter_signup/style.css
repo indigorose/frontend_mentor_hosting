@@ -141,4 +141,13 @@ img {
 
 /* Desktop Styling */
 @media (width >= 59.375rem) {
+	
+	.wrapper {
+		width:750px;
+		border: 1px solid black;
+	}
+	
+	.image__mobile {
+		display: none;
+		}
 }
