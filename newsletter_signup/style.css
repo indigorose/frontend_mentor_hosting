@@ -112,7 +112,7 @@ img {
 	font-size: 1rem;
 }
 
-/* Invalid email fix */
+/* Invalid email check */
 .form__error-message {
 	color: var(--color-primary-tomato);
 	font-size: 0.8rem;
@@ -139,15 +139,67 @@ img {
 	cursor: pointer;
 }
 
+/* Success Message */
+
+.wrapper__success-card {
+	border: 1px solid red;
+	margin-top: 5rem;
+	padding: 30px;
+}
+
+.success__image {
+	width: 50px;
+	height: 50px;
+}
+
+.success-heading {
+	font-family: 'Roboto-Bold';
+	font-size: 2.5rem;
+}
+
+.success__text {
+	font-size: 1rem;
+	line-height: 25px;
+}
+.bold-text {
+	font-family: 'Roboto-Bold';
+}
+
+.success__btn-return {
+	margin-top: 1.5rem;
+	padding: 1rem;
+	text-align: center;
+	width: 100%;
+	font-family: 'Roboto-Bold';
+	font-size: 1rem;
+	background-color: var(--color-neutral-Dark-Slate-Grey);
+	color: var(--color-neutral-White);
+	outline: none;
+	border: none;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.form__submit-btn:hover,
+.success__btn-return:hover {
+	background: rgb(255, 73, 109);
+	background: linear-gradient(
+		117deg,
+		rgba(255, 73, 109, 1) 60%,
+		rgb(255, 94, 58) 90%
+	);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
 /* Desktop Styling */
 @media (width >= 59.375rem) {
-	
 	.wrapper {
-		width:750px;
+		width: 750px;
 		border: 1px solid black;
 	}
-	
+
 	.image__mobile {
 		display: none;
-		}
+	}
 }
