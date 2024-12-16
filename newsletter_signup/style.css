@@ -23,6 +23,7 @@
 	--color-neutral-Charcoal-Grey: hsl(235, 18%, 26%);
 	--color-neutral-Grey: hsl(231, 7%, 60%);
 	--color-neutral-White: hsl(0, 0%, 100%);
+	--color-neutral-Pink: hsl(6, 77.8%, 94.7%);
 
 	font-size: 16px;
 	font-synthesis: none;
@@ -48,6 +49,10 @@ body {
 img {
 	display: block;
 	width: 100%;
+}
+
+.hidden {
+	display: none;
 }
 
 /* Mobile Styling */
@@ -88,15 +93,21 @@ img {
 	background-image: url(./assets/images/icon-list.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
+	vertical-align: text-top;
+	flex-shrink: 0;
 }
 
-.wrapper__form > p {
-	font-size: 0.8rem;
-	font-family: 'Roboto-Bold', sans-serif;
-	color: var(--color-neutral-Dark-Slate-Grey);
+.heading-container {
+	border: 1px solid black;
 	display: flex;
 	flex-direction: row;
 	gap: 110px;
+}
+
+.form-heading {
+	font-size: 0.8rem;
+	font-family: 'Roboto-Bold', sans-serif;
+	color: var(--color-neutral-Dark-Slate-Grey);
 }
 
 .email {
@@ -109,19 +120,21 @@ img {
 
 ::placeholder {
 	color: var(--color-neutral-Grey);
-	font-size: 1rem;
+	font-size: 0.8rem;
 }
 
 /* Invalid email check */
-.form__error-message {
+.error-message {
 	color: var(--color-primary-tomato);
 	font-size: 0.8rem;
-	display: none;
+	font-family: 'Roboto-Bold', sans-serif;
+	font-size: 0.8rem;
+	top: 10px;
 }
 
-.form__input-error {
+.input-error {
 	border: 2px solid var(--color-primary-tomato);
-	background-color: var(--color-primary-tomato);
+	background-color: var(--color-neutral-Pink);
 }
 
 .form__submit-btn {

@@ -1,23 +1,36 @@
-// Valid email check
-
-function validateEmail() {
+document.addEventListener('DOMContentLoaded', () => {
+	// Valid email check
 	const emailInput = document.getElementById('Email');
-	const errorMessage = document.getElementById('form__error-message');
-
-	// Simple email validation regex
+	const submitBtn = document.getElementById('submit-btn');
+	const errorMsg = document.getElementById('Error');
+	const formContainer = document.getElementById('Wrapper');
+	const successContainer = document.getElementById('Wrapper-success');
+	const emailText = document.getElementById('email-text');
+	// Check the email - regex
 	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-	if (!emailPattern.test(emailInput.value)) {
-		// Add red border and show error message
-		emailInput.classList.add('form__input-error');
-		errorMessage.textContent = 'valid email required';
-		errorMessage.style.display = 'inline';
-		return false; // Prevent form submission
-	} else {
-		// Remove error styles if input is valid
-		emailInput.classList.remove('form__input-error');
-		errorMessage.textContent = '';
-		errorMessage.style.display = 'none';
-		return true; // Allow form submission
-	}
-}
+	// onclick submit button
+	submitBtn.addEventListener('click', () => {
+		const emailValue = emailInput.value.trim();
+
+		// If true - hide wrapper container - show success container
+		if (emailPattern.test(emailValue)) {
+			formContainer.classList.add('hidden');
+			successContainer.classList.remove('hidden');
+			emailText.innerText = emailValue;
+		} else {
+			// False - display error message change the colour of the input
+			errorMsg.classList.remove('hidden');
+			emailInput.classList.add('input-error');
+		}
+	});
+	const returnBtn = document.getElementById('btn-return');
+
+	returnBtn.addEventListener('click', () => {
+		successContainer.classList.add('hidden');
+		formContainer.classList.remove('hidden');
+	});
+});
+
+// Store the email address and add to the subscribing message.
+// p tag - class success-text

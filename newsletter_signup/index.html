@@ -13,7 +13,7 @@
 			class="attribution container_mobile"
 			aria-roledescription="contentinfo"
 		>
-			<div class="wrapper">
+			<div class="wrapper" id="Wrapper">
 				<div class="wrapper__image">
 					<img
 						class="image__mobile"
@@ -41,18 +41,13 @@
 						</li>
 						<li class="wrapper__list-item">And much more!</li>
 					</ul>
-					<form
-						action=""
-						class="wrapper__form"
-						onsubmit="return validateEmail()"
-					>
-						<p>
-							Email address
-							<span
-								id="form__error-message"
-								class="form__error-message"
-							></span>
-						</p>
+					<div class="wrapper__form">
+						<div class="heading-container">
+							<p class="form-heading">Email address</p>
+							<p id="Error" class="error-message hidden">
+								Valid email required
+							</p>
+						</div>
 						<input
 							type="email"
 							name="Email"
@@ -60,10 +55,14 @@
 							class="email"
 							placeholder="email@company.com"
 						/>
-						<button type="submit" class="form__submit-btn">
+						<button
+							type="submit"
+							id="submit-btn"
+							class="form__submit-btn"
+						>
 							Subscribe to monthly newsletter
 						</button>
-					</form>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -71,7 +70,7 @@
 		<!-- Sign-up form end  -->
 
 		<!-- Success message start -->
-		<div class="wrapper__success-card">
+		<div class="wrapper__success-card hidden" id="Wrapper-success">
 			<div class="success__image">
 				<img
 					src="./assets/images/icon-success.svg"
@@ -81,28 +80,14 @@
 			<h1 class="success-heading">Thanks for subscribing!</h1>
 			<p class="success__text">
 				A confirmation email has been sent to
-				<span class="bold-text">ash@loremcompany.com</span>. Please open
-				it and click the button inside to confirm your subscription.
+				<span id="email-text" class="bold-text"></span>. Please open it
+				and click the button inside to confirm your subscription.
 			</p>
-			<button
-				type="submit"
-				class="success__btn-return"
-				id="btn-return"
-				onclick="changeCard()"
-			>
+			<button type="submit" class="success__btn-return" id="btn-return">
 				Dismiss message
 			</button>
 		</div>
 		<!-- Success message end -->
-
-		<div class="footer">
-			Challenge by
-			<a
-				href="https://www.frontendmentor.io?ref=challenge"
-				target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
-		</div>
 	</body>
 	<script src="app.js"></script>
 </html>
