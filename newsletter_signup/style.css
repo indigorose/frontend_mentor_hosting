@@ -209,10 +209,23 @@ img {
 @media (width >= 59.375rem) {
 	.wrapper {
 		width: 750px;
+		height: 450px;
 		border: 1px solid black;
+		display: flex;
+		flex-direction: row-reverse;
+		margin: 100px auto;
+		overflow: hidden;
 	}
 
+	.image__desktop {
+		display: block;
+		width: 100%;
+		border-radius: 0;
+	}
 	.image__mobile {
 		display: none;
+	}
+	.wrapper__text {
+		padding: 0 1rem;
 	}
 }
