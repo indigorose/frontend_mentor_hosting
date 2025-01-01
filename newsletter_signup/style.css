@@ -206,21 +206,28 @@ img {
 }
 
 /* Desktop Styling */
-@media (width >= 59.375rem) {
+@media (width >= 37.5rem) {
+	body {
+		background-color: var(--color-neutral-Dark-Slate-Grey);
+	}
 	.wrapper {
 		width: 750px;
-		height: 450px;
-		border: 1px solid black;
+		height: 500px;
+		border: 1px solid rgb(231, 12, 12);
+		background-color: var(--color-neutral-White);
+		border-radius: 10px;
 		display: flex;
 		flex-direction: row-reverse;
 		margin: 100px auto;
 		overflow: hidden;
+		padding: 15px 20px;
+		gap: 15px;
 	}
 
 	.image__desktop {
 		display: block;
 		width: 100%;
-		border-radius: 0;
+		margin: 10px auto;
 	}
 	.image__mobile {
 		display: none;
