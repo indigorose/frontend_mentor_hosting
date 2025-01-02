@@ -52,7 +52,7 @@ img {
 }
 
 .hidden {
-	display: none;
+	display: none !important;
 }
 
 /* Mobile Styling */
@@ -219,13 +219,12 @@ img {
 		display: flex;
 		flex-direction: row-reverse;
 		margin: 100px auto;
-		overflow: hidden;
 		padding: 15px 20px;
 		gap: 15px;
 	}
 
 	.image__desktop {
-		display: block;
+		display: inline-block;
 		width: 100%;
 		margin: 10px auto;
 	}
