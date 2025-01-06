@@ -102,6 +102,7 @@ img {
 	display: flex;
 	flex-direction: row;
 	gap: 110px;
+	justify-content: space-between;
 }
 
 .form-heading {
