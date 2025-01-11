@@ -1,6 +1,7 @@
 /* Boilerplate CSS Styles */
 
 @import url('./fonts.css');
+@import url('./cards.css');
 
 :root {
 	--color-blue: hsl(246, 80%, 60%);
@@ -40,4 +41,12 @@ img {
 
 a {
 	text-decoration: none;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	color: var(--color-very-dark-blue);
+	background-color: var(--color-pale-blue);
 }
