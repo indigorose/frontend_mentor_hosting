@@ -9,14 +9,14 @@ fetch('./data.json')
 		data.forEach((item) => {
 			const div = document.createElement('div');
 			div.className =
-				item.title.toLowerCase().replace(/\s+/g, '-') + ' state';
+				item.title.toLowerCase().replace(/\s+/g, '-') + ' card__state';
 			div.innerHTML = `
-                <div class="state-header">
-                    <h2>${item.title}</h2>
-                    <a href="#" class="more">...</a>
+                <div class="card__header">
+                    <h2 class="card__title">${item.title}</h2>
+                    <a href="#" class="card-more">...</a>
                 </div>
-                <p>${item.timeframes.weekly.current}hrs</p>
-                <small>Last Week - ${item.timeframes.weekly.previous}hrs</small>`;
+                <p class="card__main-hours">${item.timeframes.weekly.current}hrs</p>
+                <p class="card__prev-hours">Last Week - ${item.timeframes.weekly.previous}hrs</p>`;
 			statesSection.appendChild(div);
 		});
 		// Function to update the displayed data based on the selected timeframe
@@ -26,14 +26,17 @@ fetch('./data.json')
 			data.forEach((item) => {
 				const div = document.createElement('div');
 				div.className =
-					item.title.toLowerCase().replace(/\s+/g, '-') + ' state';
+					item.title.toLowerCase().replace(/\s+/g, '-') +
+					' card__state state__info';
 				div.innerHTML = `
-                    <div class="state-header">
-                        <h2>${item.title}</h2>
-                        <a href="#" class="more">...</a>
+                <div class="card__state-info">
+                    <div class="card__header">
+                        <h2 class="card__title">${item.title}</h2>
+                        <a href="#" class="card-more">...</a>
                     </div>
-                    <p>${item.timeframes[timeframe].current}hrs</p>
-                    <small>Last Week - ${item.timeframes[timeframe].previous}hrs</small>`;
+                    <p class ="card__main-hours">${item.timeframes[timeframe].current}hrs</p>
+                    <p class="card__prev-hours">Last Week - ${item.timeframes[timeframe].previous}hrs</p>
+                    </div>`;
 				statesSection.appendChild(div);
 			});
 		};
