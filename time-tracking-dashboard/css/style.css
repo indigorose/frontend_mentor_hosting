@@ -41,6 +41,7 @@ img {
 
 a {
 	text-decoration: none;
+	color: white;
 }
 
 body {
@@ -48,5 +49,13 @@ body {
 	font-size: 15px;
 	line-height: 1.5;
 	color: var(--color-very-dark-blue);
-	background-color: var(--color-pale-blue);
+	background-color: var(--color-very-dark-blue);
+}
+
+.main__container {
+	border: 1px solid white;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-gap: 1.5rem;
+	padding: 1.5rem;
 }
