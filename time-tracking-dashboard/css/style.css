@@ -126,11 +126,18 @@ body {
 }
 
 /* Card design */
+.wrapper {
+	border: 1px solid white;
+}
 
 .state_card {
-	background-color: var(--color-soft-orange);
 	border-radius: 10px;
 	padding: 1.5rem;
 	border: 1px solid white;
+	position: relative;
+}
+.card {
+	color: white;
+	background-color: var(--color-dark-blue);
 	position: relative;
 }
