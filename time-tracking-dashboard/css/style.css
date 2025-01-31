@@ -81,22 +81,27 @@ body {
 	grid-gap: 1.5rem;
 	padding: 1.5rem;
 }
-.card__state {
-	border: 1px solid white;
-	background-color: var(--color-dark-blue);
-	color: white;
-	border-radius: 10px;
-	/* width: 300px; */
-	overflow: hidden;
+
+/* Profile card */
+.profile_card {
+	/* border: 1px solid white; */
+	padding-bottom: 10px;
+	position: relative;
+	min-height: 180px;
 }
 
 .profile-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
 	background-color: var(--color-blue);
 	display: flex;
 	flex-direction: row;
 	padding: 1.5rem;
 	border-radius: 10px;
-	border: 1px solid rgb(123, 176, 123);
+	/* border: 1px solid rgb(123, 176, 123); */
 }
 
 .profile-header__img {
@@ -112,6 +117,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	color: white;
 }
 .profile-header__name span {
 	font-weight: 200;
@@ -119,10 +125,17 @@ body {
 }
 
 .profile-selector {
+	position: absolute;
+	top: 110px;
+	left: 0;
+	width: 100%;
+	z-index: 0;
+	background-color: var(--color-dark-blue);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 1.2rem 2.8rem;
+	padding: 30px 30px 20px 30px;
+	border-radius: 10px;
 }
 
 /* Card design */
