@@ -36,6 +36,13 @@ fetch('./data.json')
 		timeframeSelectors.forEach((selector) => {
 			selector.addEventListener('click', (event) => {
 				event.preventDefault();
+
+				timeframeSelectors.forEach((selector) => {
+					selector.classList.remove('active');
+				});
+
+				selector.classList.add('active');
+
 				const timeframe = selector.textContent.toLowerCase();
 				updateData(timeframe);
 			});

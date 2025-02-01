@@ -63,7 +63,6 @@ img {
 
 a {
 	text-decoration: none;
-	color: white;
 }
 
 body {
@@ -136,6 +135,19 @@ body {
 	justify-content: space-between;
 	padding: 30px 30px 20px 30px;
 	border-radius: 10px;
+}
+
+.profile-selector a {
+	color: var(--color-pale-blue);
+}
+
+.profile-selector a.active {
+	color: white;
+}
+
+.profile-selector a:hover,
+.profile-selector a:focus {
+	color: white;
 }
 
 /* Card design */
