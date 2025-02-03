@@ -192,7 +192,7 @@ body {
 	/* height: 100%; */
 	padding: 1.5rem;
 	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: center; /* Center the content vertically */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: flex-end;
 }
