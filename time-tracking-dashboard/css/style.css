@@ -194,5 +194,8 @@ body {
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	justify-items: flex-end;
+}
+.card_heading {
+	display: flex;
+	flex-direction: row;
 }
