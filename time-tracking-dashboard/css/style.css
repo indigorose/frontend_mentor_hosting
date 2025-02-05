@@ -162,6 +162,8 @@ body {
 	position: relative;
 	height: 200px;
 	margin-bottom: 1.5rem;
+	overflow: hidden;
+	border-radius: 10px;
 }
 
 .state_card {
@@ -189,13 +191,28 @@ body {
 	top: 35px;
 	left: 0;
 	width: 100%;
-	/* height: 100%; */
-	padding: 1.5rem;
+	height: 100%;
+	padding: 20px;
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	border-radius: 12px;
 }
 .card_heading {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+	grid-column: span 2;
+}
+
+.card_heading a {
+	color: white;
+	justify-self: end;
+	/* align-items: flex-end; */
+}
+
+@media (width >= 59.375rem) {
+	.main__container {
+		display: grid;
+	}
 }
