@@ -194,8 +194,8 @@ body {
 	height: 100%;
 	padding: 20px;
 	box-sizing: border-box;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	display: flex;
+	flex-direction: column;
 	border-radius: 12px;
 }
 .card_heading {
@@ -208,11 +208,28 @@ body {
 .card_heading a {
 	color: white;
 	justify-self: end;
+
 	/* align-items: flex-end; */
+}
+
+.curr_state {
+	display: flex;
+	flex-direction: column;
+}
+
+.card_title {
+	font-size: 16px;
+}
+
+.curr_hours {
+	font-size: 2rem;
+	font-weight: 200;
 }
 
 @media (width >= 59.375rem) {
 	.main__container {
 		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 1.5rem;
 	}
 }
