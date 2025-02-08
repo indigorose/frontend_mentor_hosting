@@ -202,7 +202,6 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	grid-column: span 2;
 }
 
 .card_heading a {
@@ -214,7 +213,7 @@ body {
 
 .curr_state {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .card_title {
