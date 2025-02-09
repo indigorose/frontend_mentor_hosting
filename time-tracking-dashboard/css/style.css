@@ -194,26 +194,22 @@ body {
 	height: 100%;
 	padding: 20px;
 	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	border-radius: 12px;
+	align-items: center;
 }
 .card_heading {
+	grid-column: span 2;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	margin: 0;
 }
 
 .card_heading a {
 	color: white;
 	justify-self: end;
-
-	/* align-items: flex-end; */
-}
-
-.curr_state {
-	display: flex;
-	flex-direction: row;
 }
 
 .card_title {
@@ -223,6 +219,14 @@ body {
 .curr_hours {
 	font-size: 2rem;
 	font-weight: 200;
+	margin: 0;
+}
+
+.prev_state {
+	font-size: 0.8rem;
+	font-weight: 200;
+	margin: 0;
+	color: var(--color-pale-blue);
 }
 
 @media (width >= 59.375rem) {
