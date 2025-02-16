@@ -167,7 +167,7 @@ body {
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
-	height: 170px; /* Adjust this value as needed */
+	height: 160px; /* Adjust height based on content */
 }
 
 .state_card {
@@ -175,65 +175,81 @@ body {
 	padding: 0rem 0.5rem;
 	width: 100%;
 	display: flex;
-	justify-content: flex-end; /* Position the image to the right */
-	align-items: center; /* Center the image vertically */
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .state_card img {
-	max-width: 50px; /* Adjust the size of the image as needed */
+	max-width: 25%;
 }
 
 .card {
 	color: white;
 	background-color: var(--color-dark-blue);
 	width: 100%;
-	padding: 20px;
+	padding: 15px 20px;
 	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-gap: 0;
 	border-radius: 12px;
 	position: absolute;
 	top: 40px;
 	left: 0;
-	height: 100%;
-	z-index: 1; /* Ensure it overlaps the .state_card */
+	height: auto; /* Adjust height based on content */
+	z-index: 1;
+	align-items: center; /* Center align items vertically */
 }
 
 .card_heading {
+	grid-column: 1 / span 2; /* Span both columns */
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+	justify-items: center;
 	margin: 0;
 	padding: 0;
-	border: 1px solid white;
 }
 
-.card_heading a {
-	color: white;
-	justify-self: end;
+.card a {
+	color: var(--color-pale-blue);
+	font-size: 1.8rem;
+	display: flex;
+	align-items: center; /* Center align items vertically */
+	justify-content: center; /* Center align items horizontally */
 }
 
 .card_title {
 	font-size: 16px;
 }
 
-.curr_hours {
+.curr_state {
+	grid-column: 1 / 2; /* Place in the first column */
 	font-size: 2rem;
 	font-weight: 200;
 	margin: 0;
 }
 
 .prev_state {
+	grid-column: 2 / 3; /* Place in the second column */
 	font-size: 0.8rem;
 	font-weight: 200;
 	margin: 0;
 	color: var(--color-pale-blue);
+	text-align: right; /* Align text to the right */
 }
 
 @media (min-width: 59.375rem) {
 	.main__container {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, auto);
 		grid-gap: 1.5rem;
+	}
+
+	.profile_card {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 2;
 	}
 }
