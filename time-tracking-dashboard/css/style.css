@@ -95,7 +95,6 @@ body {
 	/* border: 1px solid white; */
 	padding-bottom: 10px;
 	position: relative;
-	min-height: 180px;
 }
 
 .profile-header {
@@ -251,5 +250,6 @@ body {
 	.profile_card {
 		grid-column: 1 / span 1;
 		grid-row: 1 / span 2;
+		height: 100%;
 	}
 }
