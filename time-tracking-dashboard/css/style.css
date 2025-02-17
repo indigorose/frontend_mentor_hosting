@@ -82,6 +82,7 @@ body {
 	grid-template-rows: 1fr;
 	grid-gap: 1.5rem;
 	padding: 1.5rem;
+	position: relative;
 }
 
 .states__container {
@@ -164,18 +165,24 @@ body {
 	margin-bottom: 1.5rem;
 	overflow: hidden;
 	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row: span 1;
 	height: 160px; /* Adjust height based on content */
 }
 
 .state_card {
 	border-radius: 10px 0 0 0;
 	padding: 0rem 0.5rem;
-	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
 }
 
 .state_card img {
@@ -193,11 +200,11 @@ body {
 	grid-template-rows: auto auto;
 	grid-gap: 0;
 	border-radius: 12px;
-	position: absolute;
+	position: relative;
 	top: 40px;
 	left: 0;
 	height: auto; /* Adjust height based on content */
-	z-index: 1;
+	z-index: 2;
 	align-items: center; /* Center align items vertically */
 }
 
@@ -240,16 +247,33 @@ body {
 }
 
 @media (min-width: 59.375rem) {
+	.profile_card {
+		grid-area: profile_card;
+	}
+	.wrapper_work {
+		grid-area: work;
+	}
+	.wrapper_play {
+		grid-area: play;
+	}
+	.wrapper_study {
+		grid-area: study;
+	}
+	.wrapper_exercise {
+		grid-area: exercise;
+	}
+	.wrapper_social {
+		grid-area: social;
+	}
+	.wrapper_self-care {
+		grid-area: self-care;
+	}
 	.main__container {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(2, auto);
+		grid-template-areas:
+			'profile_card work play study'
+			'profile_card exercise social self-care';
 		grid-gap: 1.5rem;
-	}
-
-	.profile_card {
-		grid-column: 1 / span 1;
-		grid-row: 1 / span 2;
-		height: 100%;
 	}
 }
