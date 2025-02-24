@@ -68,6 +68,16 @@ a {
 	text-decoration: none;
 }
 
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: white;
+}
+
 body {
 	font-family: 'Rubik', sans-serif;
 	font-size: 15px;
@@ -75,205 +85,82 @@ body {
 	color: var(--color-very-dark-blue);
 	background-color: var(--color-very-dark-blue);
 }
+/* border colours */
+.profile_card {
+	border: 1px solid lightgreen;
+}
+
+.wrapper {
+	border: 1px dotted skyblue;
+}
+.profile-header,
+.profile-selector {
+	border: 1px solid pink;
+}
+
+/* Main Styles */
 
 .main__container {
-	border: 1px solid white;
 	display: grid;
-	grid-template-rows: 1fr;
-	grid-gap: 1.5rem;
-	padding: 1.5rem;
-	position: relative;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgb(238, 224, 144);
+	gap: 100px;
 }
 
-.states__container {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	grid-gap: 1.5rem;
-}
-
-/* Profile card */
+/* Profile card design */
 .profile_card {
-	/* border: 1px solid white; */
-	padding-bottom: 10px;
-	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
 .profile-header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-	background-color: var(--color-blue);
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
 	display: flex;
-	flex-direction: row;
-	padding: 1.5rem;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1rem;
+	background-color: var(--color-blue);
 	border-radius: 10px;
-	/* border: 1px solid rgb(123, 176, 123); */
+	z-index: 2;
 }
 
-.profile-header__img {
-	max-width: 75px;
+.header-image {
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
-	margin-right: 1rem;
 	border: 2px solid white;
-	max-height: 75px;
 }
-
-.profile-header__name {
+.header-title {
 	font-size: 1.5rem;
+	font-weight: 200;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	color: white;
 }
-.profile-header__name span {
-	font-weight: 200;
+
+.header-title span {
 	font-size: 1rem;
 }
 
 .profile-selector {
-	position: absolute;
-	top: 110px;
-	left: 0;
-	width: 100%;
-	z-index: 0;
-	background-color: var(--color-dark-blue);
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 3;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
-	padding: 30px 30px 20px 30px;
-	border-radius: 10px;
-}
-
-.profile-selector a {
-	color: var(--color-pale-blue);
-}
-
-.profile-selector a.active {
-	color: white;
-}
-
-.profile-selector a:hover,
-.profile-selector a:focus {
-	color: white;
-}
-/* Card design */
-.wrapper {
-	border: 1px solid rgb(248, 14, 14);
-	position: relative;
-	margin-bottom: 1.5rem;
-	overflow: hidden;
-	border-radius: 10px;
-	display: grid;
-	grid-template-rows: subgrid;
-	grid-row: span 1;
-	height: 160px; /* Adjust height based on content */
-}
-
-.state_card {
-	border-radius: 10px 0 0 0;
-	padding: 0rem 0.5rem;
-	display: flex;
-	justify-content: flex-end;
 	align-items: center;
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
+	padding: 5rem 1rem 1rem 1rem;
+	background-color: var(--color-dark-blue);
+	border-radius: 10px;
 	z-index: 1;
-}
-
-.state_card img {
-	max-width: 25%;
-}
-
-.card {
-	color: white;
-	background-color: var(--color-dark-blue);
-	width: 100%;
-	padding: 15px 20px;
-	box-sizing: border-box;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto;
-	grid-gap: 0;
-	border-radius: 12px;
-	position: relative;
-	top: 40px;
-	left: 0;
-	height: auto; /* Adjust height based on content */
-	z-index: 2;
-	align-items: center; /* Center align items vertically */
-}
-
-.card_heading {
-	grid-column: 1 / span 2; /* Span both columns */
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	justify-items: center;
-	margin: 0;
-	padding: 0;
-}
-
-.card a {
-	color: var(--color-pale-blue);
-	font-size: 1.8rem;
-	display: flex;
-	align-items: center; /* Center align items vertically */
-	justify-content: center; /* Center align items horizontally */
-}
-
-.card_title {
-	font-size: 16px;
-}
-
-.curr_state {
-	grid-column: 1 / 2; /* Place in the first column */
-	font-size: 2rem;
-	font-weight: 200;
-	margin: 0;
-}
-
-.prev_state {
-	grid-column: 2 / 3; /* Place in the second column */
-	font-size: 0.8rem;
-	font-weight: 200;
-	margin: 0;
-	color: var(--color-pale-blue);
-	text-align: right; /* Align text to the right */
-}
-
-@media (min-width: 59.375rem) {
-	.profile_card {
-		grid-area: profile_card;
-	}
-	.wrapper_work {
-		grid-area: work;
-	}
-	.wrapper_play {
-		grid-area: play;
-	}
-	.wrapper_study {
-		grid-area: study;
-	}
-	.wrapper_exercise {
-		grid-area: exercise;
-	}
-	.wrapper_social {
-		grid-area: social;
-	}
-	.wrapper_self-care {
-		grid-area: self-care;
-	}
-	.main__container {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-areas:
-			'profile_card work play study'
-			'profile_card exercise social self-care';
-		grid-gap: 1.5rem;
-	}
 }
