@@ -176,15 +176,17 @@ body {
 }
 
 .state_card {
-	top: 50px;
+	padding-bottom: 10px;
 	border-radius: 10px;
 	grid-row-end: 2;
 	grid-column-start: 1;
 	grid-column-end: 3;
+	border-radius: 10px;
+	padding: 0rem 0.5rem;
+	width: 100%;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-end;
+	justify-content: flex-end; /* Position the image to the right */
+	align-items: center; /* Center the image vertically */
 }
 
 .card {
@@ -202,4 +204,9 @@ body {
 	padding: 1rem;
 	background-color: var(--color-pale-blue);
 	border-radius: 10px;
+}
+
+.card_icon {
+	max-width: 50px;
+	padding-bottom: 50px;
 }
