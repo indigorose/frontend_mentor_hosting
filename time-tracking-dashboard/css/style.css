@@ -86,14 +86,19 @@ body {
 	background-color: var(--color-very-dark-blue);
 }
 /* border colours */
-.profile_card {
+/* .profile_card {
 	border: 1px solid lightgreen;
+	
 }
 
 .profile-header,
 .profile-selector {
 	border: 1px solid pink;
 }
+
+.wrapper {
+	border: 1px solid lightblue;
+} */
 
 /* Main Styles */
 
@@ -102,32 +107,46 @@ body {
 	grid-template-columns: 1fr;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid rgb(238, 224, 144);
-	gap: 1px;
+	/* border: 1px solid rgb(238, 224, 144); */
+	gap: 10px;
 }
 
 /* Profile card design */
 .profile_card {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
+	position: relative; /* Ensure the profile card is the containing block */
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	height: 180px;
 }
 
 .profile-header {
-	grid-row-end: 2;
-	grid-column-start: 1;
-	grid-column-end: 3;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	padding: 1rem;
+	padding: 1.5rem 1rem;
 	background-color: var(--color-blue);
 	border-radius: 10px;
+	margin-bottom: 10px;
 	z-index: 2;
+	position: relative; /* Ensure the profile header is positioned relative to the profile card */
+}
+
+.profile-selector {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	background-color: var(--color-dark-blue);
+	border-radius: 10px;
+	padding: 40px 20px 15px 20px;
+	z-index: 1;
+	margin-top: -80px; /* Adjust this value to create the desired overlap */
+	position: absolute; /* Position the profile selector absolutely within the profile card */
+	top: 100%; /* Position it below the profile header */
+	left: 0;
+	margin-bottom: 10px;
 }
 
 .header-image {
@@ -135,7 +154,9 @@ body {
 	height: 80px;
 	border-radius: 50%;
 	border: 2px solid white;
+	margin-right: 10px;
 }
+
 .header-title {
 	font-size: 1.5rem;
 	font-weight: 200;
@@ -147,67 +168,25 @@ body {
 	font-size: 1rem;
 }
 
-.profile-selector {
-	grid-row-start: 1;
-	grid-row-end: 3;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	padding: 5rem 1rem 1rem 1rem;
-	background-color: var(--color-dark-blue);
-	border-radius: 10px;
-	z-index: 1;
-}
-
 /* Activity card design */
 
 .wrapper {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	border: 3px solid ghostwhite;
-	border-radius: 10px;
-}
-
-.state_card {
-	border-radius: 10px;
-	grid-row-end: 2;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	border-radius: 10px;
-	padding: 0rem 0.5rem;
-	width: 100%;
 	display: flex;
-	justify-content: flex-end; /* Position the image to the right */
-	align-items: center; /* Center the image vertically */
-}
-
-.card {
-	grid-row-start: 1;
-	grid-row-end: 3;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	z-index: 1;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 25px;
-	background-color: var(--color-pale-blue);
+	flex-direction: column;
 	border-radius: 10px;
-	height: 150px;
 }
 
 .card_icon {
-	width: 100px;
-	height: 100px;
-	margin-bottom: 75px;
+	width: 55px;
+	height: 55px;
+	margin-left: auto;
+	margin-right: 10px;
+}
+.card {
+	background-color: var(--color-dark-blue);
+	border-radius: 10px;
+	padding: 1rem;
+	margin-top: -10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
