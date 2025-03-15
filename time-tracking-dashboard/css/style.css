@@ -187,9 +187,23 @@ body {
 	border-radius: 10px;
 	padding: 1rem;
 	margin-top: -10px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
+	flex-direction: column;
 }
+
+.card_1,
+.card_2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+.curr_state {
+	font-size: 1.8rem;
+	font-weight: 200;
+}
+
 @media (width >= 59.375rem) {
 	.main__container {
 		border: 1px solid blueviolet;
