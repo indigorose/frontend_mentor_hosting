@@ -66,9 +66,9 @@ img {
 
 a {
 	text-decoration: none;
+	color: var(--color-pale-blue);
 }
 
-a,
 p,
 h1,
 h2,
@@ -146,7 +146,11 @@ body {
 	position: absolute; /* Position the profile selector absolutely within the profile card */
 	top: 100%; /* Position it below the profile header */
 	left: 0;
-	margin-bottom: 10px;
+}
+
+.profile-selector a.active {
+	color: white;
+	font-size: 1rem;
 }
 
 .header-image {
@@ -186,7 +190,7 @@ body {
 	background-color: var(--color-dark-blue);
 	border-radius: 10px;
 	padding: 1rem;
-	margin-top: -10px;
+	margin-top: -20px;
 	display: flex;
 	flex-direction: column;
 }
@@ -196,12 +200,31 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+}
+
+.card_1 {
+	align-items: center;
 	padding: 10px 0;
+}
+
+.card_2 {
+	align-items: center;
+}
+
+.card_title {
+	margin: 0;
+	font-size: 1rem;
 }
 
 .curr_state {
 	font-size: 1.8rem;
 	font-weight: 200;
+}
+.prev_state {
+	font-size: 0.8rem;
+	color: var(--color-pale-blue);
 }
 
 @media (width >= 59.375rem) {
@@ -220,18 +243,18 @@ body {
 		grid-column-start: 1;
 		grid-row-start: 1;
 		grid-row-end: span 2;
-		max-height: 100%;
+		height: 270px;
 	}
 
 	.profile-header {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin-top: -95px;
-		padding: 30px;
+		margin-top: -115px;
+		padding: 55px 25px;
 	}
 	.header-image {
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 	}
 
 	.profile-header h1 {
@@ -248,7 +271,8 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 20px 20px 15px 20px;
+		padding: 40px 20px 15px 20px;
+		margin-top: -65px;
 	}
 
 	.profile-selector a {
@@ -277,6 +301,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		align-items: flex-start;
 	}
 	.curr_state {
 		font-size: 3rem;
