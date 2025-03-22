@@ -34,3 +34,57 @@ The designs were created to the following widths:
 
 - Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
 - Weights: 700 */
+
+@font-face {
+	font-family: 'Space Mono';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/tip-calculator-app/fonts/space-mono-v15-latin-regular.woff2');
+}
+
+:root {
+	--color-very-dark-cyan: hsl(183, 100%, 15%);
+	--color-strong-cyan: hsl(172, 67%, 45%);
+	--color-dark-grayish-cyan: hsl(186, 14%, 43%);
+	--color-grayish-cyan: hsl(184, 14%, 56%);
+	--color-light-grayish-cyan: hsl(185, 41%, 84%);
+	--color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--color-white: hsl(0, 0%, 100%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+body {
+	font-family: 'Space Mono', monospace;
+	font-size: 24px;
+	line-height: 1.5;
+	color: var(--color-very-dark-cyan);
+	background-color: var(--color-light-grayish-cyan);
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--color-very-dark-cyan);
+	margin: 0 auto;
+	width: 40px;
+	text-transform: uppercase;
+	text-wrap: wrap;
+}
+
+.calculator-container {
+	background-color: var(--color-white);
+	border-radius: 10px;
+	padding: 30px;
+	margin: 0 auto;
+}
