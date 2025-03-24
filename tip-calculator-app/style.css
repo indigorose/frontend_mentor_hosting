@@ -72,14 +72,19 @@ body {
 	padding: 0;
 }
 
+.main-title {
+	width: 70px; /* Fixed width */
+	word-wrap: break-word; /* Legacy */
+	overflow-wrap: break-word; /* Modern standard */
+	border: 1px solid red;
+	margin: 0 auto;
+}
+
 h1 {
 	font-size: 24px;
 	font-weight: 700;
-	color: var(--color-very-dark-cyan);
-	margin: 0 auto;
-	width: 40px;
 	text-transform: uppercase;
-	text-wrap: wrap;
+	text-align: center;
 }
 
 .calculator-container {
