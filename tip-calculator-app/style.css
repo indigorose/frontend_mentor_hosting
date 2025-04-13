@@ -125,21 +125,12 @@ label {
 	font-family: 'Space Mono', monospace;
 	text-align: right;
 	padding: 0 10px;
+	background: url('/tip-calculator-app/images/icon-dollar.svg') no-repeat 15px
+		center;
 }
 input:focus {
 	outline: none;
 	border-color: var(--color-strong-cyan);
-}
-
-.input__bill:before {
-	content: '$';
-	position: absolute;
-	left: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	color: var(--color-very-dark-cyan);
-	font-size: 24px;
-	font-family: 'Space Mono', monospace;
 }
 
 /* Tip Section */
@@ -148,11 +139,53 @@ input:focus {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 0 auto;
+	margin: 25px auto;
 }
 .calculator__tip__buttons {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	gap: 10px;
 	margin: 20px 0;
+}
+.tip-button {
+	background-color: var(--color-very-dark-cyan);
+	color: var(--color-white);
+	text-align: center;
+	font-family: 'Space Mono', monospace;
+	width: 100%;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+/* Number of people */
+
+.input__people {
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid black;
+	outline: none;
+	font-size: 24px;
+	background-color: var(--color-very-light-grayish-cyan);
+	font-family: 'Space Mono', monospace;
+	text-align: right;
+	padding: 0 10px;
+	background: url('/tip-calculator-app/images/icon-person.svg') no-repeat 15px
+		center;
+}
+
+/* Tip Results */
+
+.calculator__total {
+	background-color: var(--color-very-dark-cyan);
+	color: white;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
 }

@@ -22,14 +22,11 @@
 			<section class="calculator-container">
 				<div class="calculator__bill">
 					<label for="bill" class="label__bill">Bill</label>
-
 					<input
-						type="number"
+						type="text"
 						id="bill"
 						class="input__bill"
 						placeholder="0"
-						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						data-type="currency"
 						autocomplete="off"
 					/>
 				</div>
@@ -50,7 +47,12 @@
 				</div>
 				<div class="calculator__people">
 					<label for="people">Number of People</label>
-					<input type="number" id="people" placeholder="0" />
+					<input
+						type="text"
+						id="people"
+						placeholder="0"
+						class="input__people"
+					/>
 				</div>
 				<div class="calculator__total">
 					<div class="calculator __tip__container">
