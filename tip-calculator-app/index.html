@@ -39,14 +39,17 @@
 						<button class="tip-button">25%</button>
 						<button class="tip-button">50%</button>
 						<input
-							type="number"
+							type="text"
 							id="custom-tip"
 							placeholder="Custom"
+							class="tip-custom"
 						/>
 					</div>
 				</div>
 				<div class="calculator__people">
-					<label for="people">Number of People</label>
+					<label class="label__people" for="people"
+						>Number of People</label
+					>
 					<input
 						type="text"
 						id="people"
@@ -55,19 +58,19 @@
 					/>
 				</div>
 				<div class="calculator__total">
-					<div class="calculator __tip__container">
+					<div class="calculator__tip__container">
 						<div class="calculator__tip__label">
-							<p>Tip Amount</p>
-							<p>/ person</p>
+							<p class="total-heading">Tip Amount</p>
+							<p class="total-subheading">/ person</p>
 						</div>
-						<p class="calculator__total__amount">$0.00</p>
+						<p class="tip-amount">$0.00</p>
 					</div>
-					<div class="calculator __total__container">
+					<div class="calculator__total__container">
 						<div class="calculator__total__label">
-							<p>Total</p>
-							<p>/ person</p>
+							<p class="total-heading">Total</p>
+							<p class="total-subheading">/ person</p>
 						</div>
-						<p class="calculator__total__amount">$0.00</p>
+						<p class="total-amount">$0.00</p>
 					</div>
 					<button class="reset-button">Reset</button>
 				</div>

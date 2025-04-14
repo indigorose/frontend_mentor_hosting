@@ -118,7 +118,7 @@ label {
 	width: 100%;
 	height: 50px;
 	border-radius: 5px;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	outline: none;
 	font-size: 24px;
 	background-color: var(--color-very-light-grayish-cyan);
@@ -160,14 +160,42 @@ input:focus {
 	padding: 10px;
 }
 
+.tip-button:hover {
+	background-color: var(--color-light-grayish-cyan);
+	color: var(--color-very-dark-cyan);
+	cursor: pointer;
+}
+
+.tip-button:active {
+	background-color: var(--color-light-grayish-cyan);
+	color: var(--color-very-dark-cyan);
+}
+
+.tip-custom {
+	background-color: var(--color-very-light-grayish-cyan);
+	color: var(--color-very-dark-cy an);
+	text-align: center;
+	font-family: 'Space Mono', monospace;
+	width: 100%;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+input:focus {
+	outline: none;
+	border-color: var(--color-strong-cyan);
+}
+
 /* Number of people */
 
 .input__people {
 	width: 100%;
 	height: 50px;
 	border-radius: 5px;
-	border: 1px solid black;
-	outline: none;
+	/* border: 1px solid black; */
+	outline: var(--color-very-light-grayish-cyan);
 	font-size: 24px;
 	background-color: var(--color-very-light-grayish-cyan);
 	font-family: 'Space Mono', monospace;
@@ -182,10 +210,66 @@ input:focus {
 .calculator__total {
 	background-color: var(--color-very-dark-cyan);
 	color: white;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 20px;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 auto;
+	margin: 20px auto;
+}
+
+.calculator__tip__container,
+.calculator__total__container {
+	border: 1px solid white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.total-heading {
+	font-size: 1rem;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+.total-subheading {
+	font-size: 0.8rem;
+	color: var(--color-grayish-cyan);
+	padding: 0;
+	margin: 0;
+}
+
+.tip-amount,
+.total-amount {
+	font-size: 2rem;
+	color: var(--color-strong-cyan);
+	padding: 0;
+	margin: 0;
+}
+
+.reset-button {
+	background-color: var(--color-strong-cyan);
+	color: var(--color-white);
+	text-align: center;
+	font-family: 'Space Mono', monospace;
+	width: 100%;
+	font-size: 18px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 20px;
+}
+.reset-button:hover {
+	background-color: var(--color-light-grayish-cyan);
+	color: var(--color-very-dark-cyan);
+	cursor: pointer;
+}
+.reset-button:active {
+	background-color: var(--color-light-grayish-cyan);
+	color: var(--color-very-dark-cyan);
 }
