@@ -65,10 +65,6 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-input[type='number'] {
-	-moz-appearance: textfield;
-}
-
 body {
 	font-family: 'Space Mono', monospace;
 	font-size: 24px;
@@ -118,15 +114,20 @@ label {
 	width: 100%;
 	height: 50px;
 	border-radius: 5px;
-	/* border: 1px solid black; */
 	outline: none;
 	font-size: 24px;
-	background-color: var(--color-very-light-grayish-cyan);
+	color: var(--color-very-dark-cyan);
+	background-color: var(
+		--color-very-light-grayish-cyan
+	); /* Fixed this line */
 	font-family: 'Space Mono', monospace;
 	text-align: right;
 	padding: 0 10px;
-	background: url('/tip-calculator-app/images/icon-dollar.svg') no-repeat 15px
-		center;
+	padding-left: 40px; /* Makes space for the icon on the left */
+	background-image: url('/tip-calculator-app/images/icon-dollar.svg');
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	border: none;
 }
 input:focus {
 	outline: none;
@@ -173,7 +174,7 @@ input:focus {
 
 .tip-custom {
 	background-color: var(--color-very-light-grayish-cyan);
-	color: var(--color-very-dark-cy an);
+	color: var(--color-very-dark-cyan);
 	text-align: center;
 	font-family: 'Space Mono', monospace;
 	width: 100%;
@@ -194,15 +195,17 @@ input:focus {
 	width: 100%;
 	height: 50px;
 	border-radius: 5px;
+	border: none;
 	/* border: 1px solid black; */
-	outline: var(--color-very-light-grayish-cyan);
+	outline: var(--color-grayish-cyan);
 	font-size: 24px;
 	background-color: var(--color-very-light-grayish-cyan);
 	font-family: 'Space Mono', monospace;
 	text-align: right;
 	padding: 0 10px;
-	background: url('/tip-calculator-app/images/icon-person.svg') no-repeat 15px
-		center;
+	background-image: url('/tip-calculator-app/images/icon-person.svg');
+	background-repeat: no-repeat;
+	background-position: 15px center;
 }
 
 /* Tip Results */
@@ -272,4 +275,26 @@ input:focus {
 .reset-button:active {
 	background-color: var(--color-light-grayish-cyan);
 	color: var(--color-very-dark-cyan);
+}
+
+@media (width >= 59.375rem) {
+	.calculator-container {
+		display: flex;
+		flex-direction: row;
+		width: 800px;
+		height: 375px;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px;
+		margin: 30px;
+		gap: 30px;
+	}
+
+	.calculator__inputs,
+	.calculator__total {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
