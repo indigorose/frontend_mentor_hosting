@@ -202,6 +202,21 @@ input:focus {
 
 /* Number of people */
 
+.people-label {
+	display: flex;
+	flex-direction: row;
+	border: 1px solid black;
+}
+
+/* Error message */
+
+.error-message {
+	color: var(red);
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top: 10px;
+}
+
 .input__people {
 	width: 100%;
 	height: 50px;
