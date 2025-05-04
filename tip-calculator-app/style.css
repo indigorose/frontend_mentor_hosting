@@ -51,6 +51,23 @@ The designs were created to the following widths:
 	--color-very-light-grayish-cyan: hsl(189, 41%, 97%);
 	--color-white: hsl(0, 0%, 100%);
 }
+body {
+	font-family: 'Space Mono', monospace;
+	font-size: 24px;
+	line-height: 1.5;
+	color: var(--color-very-dark-cyan);
+	background-color: var(--color-light-grayish-cyan);
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+label {
+	font-size: 1rem;
+}
 
 input {
 	-webkit-appearance: none;
@@ -65,14 +82,11 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-body {
-	font-family: 'Space Mono', monospace;
+h1 {
 	font-size: 24px;
-	line-height: 1.5;
-	color: var(--color-very-dark-cyan);
-	background-color: var(--color-light-grayish-cyan);
-	margin: 0;
-	padding: 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 .main-title {
@@ -81,13 +95,6 @@ body {
 	overflow-wrap: break-word; /* Modern standard */
 	border: 1px solid red;
 	margin: 0 auto;
-}
-
-h1 {
-	font-size: 24px;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-align: center;
 }
 
 .calculator-container {
@@ -114,10 +121,6 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	margin: 0 auto;
-}
-
-label {
-	font-size: 1rem;
 }
 
 .input__bill {
@@ -206,12 +209,15 @@ input:focus {
 	display: flex;
 	flex-direction: row;
 	border: 1px solid black;
+	justify-content: space-between;
 }
 
 /* Error message */
 
 .error-message {
-	color: var(red);
+	display: none;
+	border: 1px solid red;
+	color: red;
 	font-size: 0.8rem;
 	text-align: center;
 	margin-top: 10px;
@@ -306,18 +312,19 @@ input:focus {
 	.calculator-container {
 		display: flex;
 		flex-direction: row;
-		width: 800px;
-		height: 375px;
 		justify-content: space-between;
 		align-items: center;
 		padding: 40px;
 		margin: 30px auto;
 		gap: 40px;
+		width: auto; /* Allow the width to adjust based on content */
+		height: auto; /* Allow the height to adjust based on content */
+		max-width: 60%; /* Prevent it from exceeding the viewport width */
 	}
 
 	.calculator__inputs,
 	.calculator__total {
-		width: 50%;
+		width: 50%; /* Adjust width of child elements */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -325,7 +332,6 @@ input:focus {
 
 	.calculator__total {
 		align-self: stretch;
-		height: 90%;
 		margin: 0;
 	}
 
@@ -333,9 +339,6 @@ input:focus {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		gap: 10px;
-	}
-	.calculator__tip__buttons .tip-button {
-		width: 100%;
 	}
 
 	.calculator__tip__container,
