@@ -3,7 +3,8 @@
 // Elements from the DOM
 
 const billInput = document.getElementById('bill'); /* Bill input */
-const customTipInput = document.getElementById('custom'); /* Custom tip input */
+const customTipInput =
+	document.getElementById('custom-tip'); /* Custom tip input */
 const peopleInput = document.getElementById('people');
 // Tip button values
 const tipButtons = document.querySelectorAll('.tip-button');
@@ -58,8 +59,8 @@ resetButton.addEventListener('click', () => {
 	billInput.value = '';
 	customTipInput.value = '';
 	peopleInput.value = '';
-	tipAmount.textContent = '$0.00';
-	totalAmount.textContent = '$0.00';
+	tipAmount.textContent = '0.00';
+	totalAmount.textContent = '0.00';
 	peopleWarning.style.display = 'none';
 	peopleInput.style.borderColor = '';
 });
