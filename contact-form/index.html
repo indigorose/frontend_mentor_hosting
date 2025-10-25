@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Contact Form</title>
+	</head>
+	<body>
+		<main class="main-container">
+			<form action="POST" class="form-container">
+				<div class="name-container">
+					<label for="firstName" class="label" id="firstName"
+						>First Name
+						<span class="importance-star">*</span></label
+					>
+					<input
+						type="text"
+						name="firstName"
+						id="firstName"
+						class="input-box"
+					/>
+					<label for="lastName" class="label" id="lastName"
+						>Last Name <span class="importance-star">*</span></label
+					>
+					<input
+						type="text"
+						name="lastName"
+						id="lastName"
+						class="input-box"
+					/>
+				</div>
+				<div class="email-container">
+					<label for="email" class="label"
+						>Email Address
+						<span class="importance-star">*</span></label
+					>
+					<input
+						type="email"
+						name="lastName"
+						id="lastName"
+						class="input-box"
+					/>
+				</div>
+				<div class="query-container">
+					<label for="query" class="label"
+						>Query Type<span class="importance-star">*</span></label
+					>
+					<input
+						type="radio"
+						name="generalQuery"
+						id="generalQuery"
+						value="General Enquiry"
+					/>General Enquiry<br />
+					<input
+						type="radio"
+						name="supportQuery"
+						id="supportQuery"
+						value="Support Request"
+					/>Support Request
+				</div>
+				<div class="message-container">
+					<label for="message" class="label"
+						>Message<span class="importance-star">*</span></label
+					>
+					<textarea
+						type="text"
+						name="messageText"
+						id="messageText"
+						rows="4"
+						col="50"
+					></textarea>
+				</div>
+				<div class="submit-container">
+					<label for="">
+						<input
+							type="checkbox"
+							name="consentBox"
+							id="consentBox"
+						/>
+						I consent to be contacted by the team.
+						<span class="importance-star">*</span>
+					</label>
+					<button type="submit">Submit</button>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
