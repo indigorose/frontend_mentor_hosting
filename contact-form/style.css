@@ -1,3 +1,46 @@
+/* ### Primary
+
+- Green 200 (lighter): hsl(148, 38%, 91%)
+- Green 600 (medium): hsl(169, 82%, 27%)
+- Red: hsl(0, 66%, 54%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Grey 500 (medium): hsl(186, 15%, 59%)
+- Grey 900 (darker): hsl(187, 24%, 22%)
+
+## Typography
+
+### Body Copy
+
+- Font size (labels): 16px
+
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+	--color-green-200: oklch(0.9419 0.0222 162.84);
+	--color-green-600: oklch(0.5289 0.0967 175.37);
+	--color-red: oklch(0.5883 0.192 25.33);
+	--color-white: oklch(1 0 0);
+	--color-grey-500: oklch(0.6951 0.0317 204.73);
+	--color-grey-900: oklch(0.3625 0.0299 206.33);
+	font-size: 16px;
+	font-family: 'Karla', Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-color: var(--color-green-200);
+}
+
 .main-container {
 	border: 1px solid black;
+	max-width: 30rem;
+	background-color: var(--color-white);
 }
