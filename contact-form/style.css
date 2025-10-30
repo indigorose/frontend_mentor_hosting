@@ -43,4 +43,7 @@ body {
 	border: 1px solid black;
 	max-width: 30rem;
 	background-color: var(--color-white);
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0 1rem;
 }
