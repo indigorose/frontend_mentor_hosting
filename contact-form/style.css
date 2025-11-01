@@ -41,9 +41,45 @@ body {
 
 .main-container {
 	border: 1px solid black;
+	border-radius: 0.8rem;
 	max-width: 30rem;
 	background-color: var(--color-white);
 	display: grid;
 	grid-template-columns: 1fr;
 	margin: 0 1rem;
+	padding: 1.5rem;
+}
+
+.form-header {
+	margin: 0;
+	padding-bottom: 1rem;
+}
+
+.name-container,
+.email-container,
+.query-container,
+.message-container,
+.submit-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	color: var(--color-grey-900);
+	font-size: 0.8rem;
+}
+
+input {
+	margin: 0.8rem 0 1rem 0;
+	padding: 0.7rem;
+	border-radius: 0.2rem;
+	border: 1px solid var(--color-grey-500);
+}
+
+.importance-star {
+	color: var(--color-green-600);
+}
+
+.query-radio-btn {
+	margin: 0.8rem 0 1rem 0;
+	padding: 0.2rem;
+	border-radius: 0.2rem;
+	border: 1px solid var(--color-grey-500);
 }

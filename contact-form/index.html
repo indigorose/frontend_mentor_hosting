@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<main class="main-container">
-			<h1>Contact Us</h1>
+			<h1 class="form-header">Contact Us</h1>
 			<form action="POST" class="form-container">
 				<div class="name-container">
 					<label for="firstName" class="label" id="firstName"
@@ -47,18 +47,25 @@
 					<label for="query" class="label"
 						>Query Type<span class="importance-star">*</span></label
 					>
-					<input
-						type="radio"
-						name="generalQuery"
-						id="generalQuery"
-						value="General Enquiry"
-					/>General Enquiry<br />
-					<input
-						type="radio"
-						name="supportQuery"
-						id="supportQuery"
-						value="Support Request"
-					/>Support Request
+					<div class="query-radio-btn">
+						<input
+							class="radio-btn"
+							type="radio"
+							name="generalQuery"
+							id="generalQuery"
+							value="General Enquiry"
+						/><label for="general enquiry">General Enquiry</label
+						><br />
+					</div>
+					<div class="query-radio-btn">
+						<input
+							class="radio-btn"
+							type="radio"
+							name="supportQuery"
+							id="supportQuery"
+							value="Support Request"
+						/><label for="support query">Support Request</label>
+					</div>
 				</div>
 				<div class="message-container">
 					<label for="message" class="label"
