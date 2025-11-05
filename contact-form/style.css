@@ -110,6 +110,7 @@ textarea {
 .consent-text {
 	grid-column-start: 2;
 	grid-column-end: 6;
+	font-size: 0.8rem;
 }
 
 .submit-btn {
@@ -119,4 +120,5 @@ textarea {
 	color: var(--color-white);
 	border-radius: 0.5rem;
 	border: none;
+	font-size: 0.8rem;
 }
