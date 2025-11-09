@@ -122,3 +122,9 @@ textarea {
 	border: none;
 	font-size: 0.8rem;
 }
+
+.input-error {
+	color: var(--color-red);
+	border: 1px solid red;
+	padding: 1rem;
+}

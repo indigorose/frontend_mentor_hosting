@@ -9,41 +9,46 @@
 	<body>
 		<main class="main-container">
 			<h1 class="form-header">Contact Us</h1>
-			<form action="POST" class="form-container">
-				<div class="name-container">
-					<label for="firstName" class="label" id="firstName"
-						>First Name
-						<span class="importance-star">*</span></label
-					>
-					<input
-						type="text"
-						name="firstName"
-						id="firstName"
-						class="input-box"
-					/>
-					<label for="lastName" class="label" id="lastName"
-						>Last Name <span class="importance-star">*</span></label
-					>
-					<input
-						type="text"
-						name="lastName"
-						id="lastName"
-						class="input-box"
-					/>
+			<form action="POST" class="form-container" id="container-form">
+				<div class="name-container" id="container-name">
+					<div class="container-first-name">
+						<label for="firstName" class="label" id="firstName"
+							>First Name
+							<span class="importance-star">*</span></label
+						>
+						<input
+							type="text"
+							name="firstName"
+							id="firstName"
+							class="input-box"
+						/>
+					</div>
+					<div class="container-last-name">
+						<label for="lastName" class="label" id="lastName"
+							>Last Name
+							<span class="importance-star">*</span></label
+						>
+						<input
+							type="text"
+							name="lastName"
+							id="lastName"
+							class="input-box"
+						/>
+					</div>
 				</div>
-				<div class="email-container">
+				<div class="email-container" id="container-email">
 					<label for="email" class="label"
 						>Email Address
 						<span class="importance-star">*</span></label
 					>
 					<input
 						type="email"
-						name="lastName"
-						id="lastName"
+						name="email"
+						id="emailAddress"
 						class="input-box"
 					/>
 				</div>
-				<div class="query-container">
+				<div class="query-container" id="container-query">
 					<label for="query" class="label"
 						>Query Type<span class="importance-star">*</span></label
 					>
@@ -67,7 +72,7 @@
 						/><label for="support query">Support Request</label>
 					</div>
 				</div>
-				<div class="message-container">
+				<div class="message-container" id="container-message">
 					<label for="message" class="label"
 						>Message<span class="importance-star">*</span></label
 					>
@@ -79,7 +84,7 @@
 						col="50"
 					></textarea>
 				</div>
-				<div class="submit-container">
+				<div class="submit-container" id="container-submit">
 					<input
 						type="checkbox"
 						name="consentBox"
@@ -89,8 +94,8 @@
 						I consent to be contacted by the team.
 						<span class="importance-star">*</span>
 					</label>
-					<button type="submit" class="submit-btn">Submit</button>
 				</div>
+				<button type="submit" class="submit-btn">Submit</button>
 			</form>
 		</main>
 	</body>
