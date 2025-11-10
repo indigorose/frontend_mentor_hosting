@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Validation logic
 
 	const form = document.getElementById('container-form');
+	const successContainer = document.getElementById('wrapperSuccess');
 	const firstName = document.getElementById('firstName');
 	const lastName = document.getElementById('lastName');
 	const email = document.getElementById('emailAddress');
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const setError = (control, msg) => {
 		const err = getErrorEl(control);
-		err.textContent = msg;
+		err.textContent = stdErrorMsg;
 		control.classList.add('input-error');
 	};
 
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			control === message
 		) {
 			if (!val) {
-				setError(control, StdErrorMsg);
+				setError(control, stdErrorMsg);
 				return false;
 			}
 			clearError(control);
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		if (control === email) {
 			if (!val) {
-				setError(control, StdErrorMsg);
+				setError(control, stdErrorMsg);
 				return false;
 			}
 			if (!emailPattern.test(val)) {
@@ -134,7 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// form is valid -> proceed (either submit or show success)
 			// use form.submit() to perform normal submit, or handle via AJAX here
-			form.submit();
+			const returnBtn = document.getElementById('btn-return');
+
+			returnBtn.addEventListener('click', () => {
+				successContainer.classList.add('hidden');
+				form.classList.remove('hidden');
+			});
 		});
 	}
 });

@@ -95,8 +95,28 @@
 						<span class="importance-star">*</span>
 					</label>
 				</div>
-				<button type="submit" class="submit-btn">Submit</button>
+				<button type="submit" class="submit-btn" id="submit-btn">
+					Submit
+				</button>
 			</form>
+
+			<!-- Success message start -->
+			<div class="container-success hidden" id="wrapperSuccess">
+				<h2 class="success-heading">Thanks for subscribing!</h2>
+				<p class="success__text">
+					A confirmation email has been sent to
+					<span id="email-text" class="bold-text"></span>. Please open
+					it and click the button inside to confirm your subscription.
+				</p>
+				<button
+					type="submit"
+					class="success__btn-return"
+					id="btn-return"
+				>
+					Dismiss message
+				</button>
+			</div>
+			<!-- Success message end -->
 		</main>
 	</body>
 </html>
