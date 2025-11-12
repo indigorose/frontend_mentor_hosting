@@ -9,7 +9,13 @@
 	<body>
 		<main class="main-container">
 			<h1 class="form-header">Contact Us</h1>
-			<form action="POST" class="form-container" id="container-form">
+			<form
+				method="get"
+				action=""
+				class="form-container"
+				id="container-form"
+				name="form"
+			>
 				<div class="name-container" id="container-name">
 					<div class="container-first-name">
 						<label for="firstName" class="label" id="firstName"
@@ -99,6 +105,8 @@
 					Submit
 				</button>
 			</form>
+
+			<p class="form-success" id="form-success"></p>
 
 			<!-- Success message start -->
 			<div class="container-success hidden" id="wrapperSuccess">

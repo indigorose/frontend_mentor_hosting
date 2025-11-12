@@ -123,10 +123,16 @@ textarea {
 	font-size: 0.8rem;
 }
 
+.error-message {
+	color: #e74c3c; /* red */
+	font-size: 0.9rem;
+	display: none; /* JS toggles display */
+	margin-left: 6px;
+}
+
 .input-error {
-	color: var(--color-red);
-	border: 1px solid red;
-	padding: 1rem;
+	outline: 2px solid rgba(231, 76, 60, 0.15);
+	border-color: #e74c3c;
 }
 
 .hidden {
