@@ -26,8 +26,9 @@
 							type="text"
 							name="firstName"
 							id="firstName"
-							class="input-box"
+							class="firstName input-box"
 						/>
+						<span class="error-message" id="fname-error"></span>
 					</div>
 					<div class="container-last-name">
 						<label for="lastName" class="label" id="lastName"
@@ -38,8 +39,9 @@
 							type="text"
 							name="lastName"
 							id="lastName"
-							class="input-box"
+							class="lastName input-box"
 						/>
+						<span class="error-message" id="lname-error"></span>
 					</div>
 				</div>
 				<div class="email-container" id="container-email">
@@ -50,9 +52,10 @@
 					<input
 						type="email"
 						name="email"
-						id="emailAddress"
-						class="input-box"
+						id="email"
+						class="emailInput input-box"
 					/>
+					<span class="error-message" id="email-error"></span>
 				</div>
 				<div class="query-container" id="container-query">
 					<label for="query" class="label"
@@ -63,7 +66,7 @@
 							class="radio-btn"
 							type="radio"
 							name="generalQuery"
-							id="generalQuery"
+							id="queryType"
 							value="General Enquiry"
 						/><label for="general enquiry">General Enquiry</label
 						><br />
@@ -73,9 +76,13 @@
 							class="radio-btn"
 							type="radio"
 							name="supportQuery"
-							id="supportQuery"
+							id="queryType"
 							value="Support Request"
 						/><label for="support query">Support Request</label>
+						<div class="input-error">
+							<p class="error-message"></p>
+						</div>
+						<span class="error-message" id="query-error"></span>
 					</div>
 				</div>
 				<div class="message-container" id="container-message">
@@ -89,6 +96,7 @@
 						rows="10"
 						col="50"
 					></textarea>
+					<span class="error-message" id="message-error"></span>
 				</div>
 				<div class="submit-container" id="container-submit">
 					<input
@@ -100,6 +108,7 @@
 						I consent to be contacted by the team.
 						<span class="importance-star">*</span>
 					</label>
+					<span class="error-message" id="consent-error"></span>
 				</div>
 				<button type="submit" class="submit-btn" id="submit-btn">
 					Submit
