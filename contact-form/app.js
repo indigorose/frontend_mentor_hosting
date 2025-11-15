@@ -1,9 +1,9 @@
 function validateForm() {
 	const firstName = document.getElementById('firstName').value;
-	const lastName = document.getElementById('latsName').value;
+	const lastName = document.getElementById('lastName').value;
 	const email = document.getElementById('email').value;
-	const queryType = document.getElementById('queryType');
-	const message = document.getElementById('message').value;
+	// const queryType = document.getElementById('queryType');
+	const message = document.getElementById('messageText').value;
 	const consent = document.getElementById('consent').checked;
 
 	const fnameErr = document.getElementById('fname-error');
@@ -47,4 +47,13 @@ function validateForm() {
 			'To submit this form, please consent to being contacted';
 		isValid = false;
 	}
+}
+
+function resetErrors() {
+	document.getElementById('lname-error').textContent = '';
+	document.getElementById('fname-error').textContent = '';
+	document.getElementById('email-error').textContent = '';
+	document.getElementById('query-error').textContent = '';
+	document.getElementById('message-error').textContent = '';
+	document.getElementById('consent-error').textContent = '';
 }

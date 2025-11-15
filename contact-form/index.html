@@ -10,8 +10,7 @@
 		<main class="main-container">
 			<h1 class="form-header">Contact Us</h1>
 			<form
-				method="get"
-				action=""
+				onsubmit="return validateForm()"
 				class="form-container"
 				id="container-form"
 				name="form"
@@ -58,32 +57,24 @@
 					<span class="error-message" id="email-error"></span>
 				</div>
 				<div class="query-container" id="container-query">
-					<label for="query" class="label"
-						>Query Type<span class="importance-star">*</span></label
-					>
-					<div class="query-radio-btn">
-						<input
-							class="radio-btn"
-							type="radio"
-							name="generalQuery"
-							id="queryType"
-							value="General Enquiry"
-						/><label for="general enquiry">General Enquiry</label
-						><br />
-					</div>
-					<div class="query-radio-btn">
-						<input
-							class="radio-btn"
-							type="radio"
-							name="supportQuery"
-							id="queryType"
-							value="Support Request"
-						/><label for="support query">Support Request</label>
-						<div class="input-error">
-							<p class="error-message"></p>
-						</div>
-						<span class="error-message" id="query-error"></span>
-					</div>
+					<p for="query" class="label">
+						Query Type <span class="importance-star">*</span>
+					</p>
+					<input
+						type="radio"
+						id="generalQuery"
+						name="queryType"
+						value="General Query"
+					/>
+					<label for="generalQuery">General Query</label><br />
+					<input
+						type="radio"
+						id="supportRequest"
+						name="queryType"
+						value="Support Request"
+					/>
+					<label for="supportRequest">Support Request</label>
+					<span class="error-message" id="query-error"></span>
 				</div>
 				<div class="message-container" id="container-message">
 					<label for="message" class="label"
@@ -102,23 +93,34 @@
 					<input
 						type="checkbox"
 						name="consentBox"
-						id="consentBox"
-						class="consent-box"
+						id="consent"
+						class="consent"
 					/><label for="consent" class="consent-text">
 						I consent to be contacted by the team.
 						<span class="importance-star">*</span>
 					</label>
 					<span class="error-message" id="consent-error"></span>
 				</div>
-				<button type="submit" class="submit-btn" id="submit-btn">
-					Submit
-				</button>
+				<p>
+					<input
+						type="submit"
+						value="Submit"
+						name="Submit"
+						class="submit-btn"
+					/>
+					<input
+						type="reset"
+						value="Reset"
+						name="Reset"
+						class="reset-btn"
+					/>
+				</p>
 			</form>
 
 			<p class="form-success" id="form-success"></p>
 
 			<!-- Success message start -->
-			<div class="container-success hidden" id="wrapperSuccess">
+			<!-- <div class="container-success hidden" id="wrapperSuccess">
 				<h2 class="success-heading">Thanks for subscribing!</h2>
 				<p class="success__text">
 					A confirmation email has been sent to
@@ -132,8 +134,9 @@
 				>
 					Dismiss message
 				</button>
-			</div>
+			</div> -->
 			<!-- Success message end -->
 		</main>
 	</body>
+	<script src="app.js"></script>
 </html>

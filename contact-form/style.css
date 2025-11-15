@@ -126,13 +126,8 @@ textarea {
 .error-message {
 	color: #e74c3c; /* red */
 	font-size: 0.9rem;
-	display: none; /* JS toggles display */
+	display: inline-block; /* JS toggles display */
 	margin-left: 6px;
-}
-
-.input-error {
-	outline: 2px solid rgba(231, 76, 60, 0.15);
-	border-color: #e74c3c;
 }
 
 .hidden {
