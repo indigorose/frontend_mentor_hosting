@@ -2,7 +2,7 @@ function validateForm() {
 	const firstName = document.getElementById('firstName').value;
 	const lastName = document.getElementById('lastName').value;
 	const email = document.getElementById('email').value;
-	// const queryType = document.getElementById('queryType');
+	const queryTypes = document.querySelectorAll('input[name="queryType"]');
 	const message = document.getElementById('messageText').value;
 	const consent = document.getElementById('consent').checked;
 
@@ -20,10 +20,12 @@ function validateForm() {
 	msgErr.textContent = '';
 	consentErr.textContent = '';
 
-	let isValid = true;
 	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	const selected = [...queryTypes].some((queryType) => queryType.checked);
 
-	if (firstName === '' || /\d/.test(firstName)) {
+	let isValid = true;
+
+	if (firstName === '') {
 		fnameErr.textContent = 'This field is required';
 		isValid = false;
 	}
@@ -37,15 +39,26 @@ function validateForm() {
 		emailErr.textContent = 'Please enter a valid email address';
 		isValid = false;
 	}
+	if (!selected) {
+		queryErr.textContent = 'Please select as query type';
+		isValid = false;
+	}
 
 	if (message === '') {
 		msgErr.textContent = 'This field is required';
+		isValid = false;
 	}
 
 	if (!consent) {
 		consentErr.textContent =
 			'To submit this form, please consent to being contacted';
 		isValid = false;
+	}
+	if (isValid) {
+		// inner text change = "Form submitted successfully"
+		return true;
+	} else {
+		return false;
 	}
 }
 

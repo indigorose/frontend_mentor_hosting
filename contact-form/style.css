@@ -39,6 +39,15 @@ body {
 	background-color: var(--color-green-200);
 }
 
+input,
+textarea {
+	margin: 0.8rem 0 1rem 0;
+	padding: 0.7rem;
+	border-radius: 0.2rem;
+	border: 1px solid var(--color-grey-500);
+	resize: none;
+}
+
 .main-container {
 	border: 1px solid black;
 	border-radius: 0.8rem;
@@ -53,24 +62,7 @@ body {
 .form-header {
 	margin: 0;
 	padding-bottom: 1rem;
-}
-
-.name-container,
-.email-container,
-.query-container,
-.message-container {
-	display: grid;
-	grid-template-columns: 1fr;
 	color: var(--color-grey-900);
-	font-size: 0.8rem;
-}
-
-input,
-textarea {
-	margin: 0.8rem 0 1rem 0;
-	padding: 0.7rem;
-	border-radius: 0.2rem;
-	border: 1px solid var(--color-grey-500);
 }
 
 .importance-star {
@@ -91,9 +83,6 @@ textarea {
 
 .radio-btn {
 	margin: 0;
-}
-textarea {
-	resize: none;
 }
 
 .submit-container {
