@@ -24,6 +24,9 @@ function validateForm() {
 	const selected = [...queryTypes].some((queryType) => queryType.checked);
 
 	let isValid = true;
+	
+	console.log(firstName, lastName)
+	
 
 	if (firstName === '') {
 		fnameErr.textContent = 'This field is required';
