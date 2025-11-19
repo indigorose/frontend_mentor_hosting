@@ -27,6 +27,7 @@ function validateForm() {
 
 	if (firstName === '') {
 		fnameErr.textContent = 'This field is required';
+		firstName.classList.add("input-error")
 		isValid = false;
 	}
 
@@ -64,6 +65,7 @@ function validateForm() {
 
 function resetErrors() {
 	document.getElementById('lname-error').textContent = '';
+	firstName.classList.remove("input-error");
 	document.getElementById('fname-error').textContent = '';
 	document.getElementById('email-error').textContent = '';
 	document.getElementById('query-error').textContent = '';
