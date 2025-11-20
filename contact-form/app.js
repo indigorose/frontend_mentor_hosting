@@ -1,11 +1,11 @@
-function validateForm() {
-	const firstName = document.getElementById('firstName').value;
-	const lastName = document.getElementById('lastName').value;
-	const email = document.getElementById('email').value;
-	const queryTypes = document.querySelectorAll('input[name="queryType"]');
-	const message = document.getElementById('messageText').value;
-	const consent = document.getElementById('consent').checked;
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const email = document.getElementById('email');
+const queryTypes = document.querySelectorAll('input[name="queryType"]');
+const message = document.getElementById('messageText');
+const consent = document.getElementById('consent');
 
+function validateForm() {
 	const fnameErr = document.getElementById('fname-error');
 	const lnameErr = document.getElementById('lname-error');
 	const emailErr = document.getElementById('email-error');
@@ -25,19 +25,21 @@ function validateForm() {
 
 	let isValid = true;
 
-	if (firstName === '') {
+	if (firstName.value === '') {
 		fnameErr.textContent = 'This field is required';
-		firstName.classList.add("input-error")
+		firstName.classList.add('input-error');
 		isValid = false;
 	}
 
-	if (lastName === '' || /\d/.test(lastName)) {
+	if (lastName.value === '' || /\d/.test(lastName)) {
 		lnameErr.textContent = 'This field is required';
+		lastName.classList.add('input-error');
 		isValid = false;
 	}
 
-	if (email === '' || emailPattern.test(email)) {
+	if (email.value === '' || emailPattern.test(email)) {
 		emailErr.textContent = 'Please enter a valid email address';
+		email.classList.add('input-error');
 		isValid = false;
 	}
 	if (!selected) {
@@ -45,12 +47,13 @@ function validateForm() {
 		isValid = false;
 	}
 
-	if (message === '') {
+	if (message.value === '') {
+		message.classList.add('input-error');
 		msgErr.textContent = 'This field is required';
 		isValid = false;
 	}
 
-	if (!consent) {
+	if (!consent.checked) {
 		consentErr.textContent =
 			'To submit this form, please consent to being contacted';
 		isValid = false;
@@ -65,10 +68,13 @@ function validateForm() {
 
 function resetErrors() {
 	document.getElementById('lname-error').textContent = '';
-	firstName.classList.remove("input-error");
 	document.getElementById('fname-error').textContent = '';
 	document.getElementById('email-error').textContent = '';
 	document.getElementById('query-error').textContent = '';
 	document.getElementById('message-error').textContent = '';
 	document.getElementById('consent-error').textContent = '';
+	firstName.classList.remove('input-error');
+	lastName.classList.remove('input-error');
+	email.classList.remove('input-error');
+	message.classList.remove('input-error');
 }
