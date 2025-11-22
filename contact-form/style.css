@@ -39,12 +39,18 @@ body {
 	background-color: var(--color-green-200);
 }
 
-input [type='textarea'] {
+.container-message > textarea {
 	margin: 0.8rem 0 1rem 0;
 	padding: 0.7rem;
 	border-radius: 0.2rem;
 	border: 1px solid var(--color-grey-500);
 	resize: none;
+}
+
+.container-radio-btn {
+	padding: 0.7rem;
+	border-radius: 0.2rem;
+	border: 1px solid var(--color-grey-500);
 }
 
 .input-box {
@@ -62,6 +68,7 @@ input [type='textarea'] {
 	grid-template-columns: 1fr;
 	margin: 0 1rem;
 	padding: 1.5rem;
+	gap: 1.5rem;
 }
 
 .form-header {
@@ -80,12 +87,16 @@ input [type='textarea'] {
 	gap: 1rem;
 }
 
+.container-name,
 .container-first-name,
 .container-last-name,
-.container-email {
+.container-email,
+.container-query,
+.container-message {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .query-radio-btn {

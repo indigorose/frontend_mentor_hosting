@@ -56,27 +56,31 @@
 					/>
 					<span class="error-message" id="email-error"></span>
 				</div>
-				<div class="query-container" id="container-query">
+				<div class="container-query" id="container-query">
 					<p for="query" class="label">
 						Query Type <span class="importance-star">*</span>
 					</p>
-					<input
-						type="radio"
-						id="generalQuery"
-						name="queryType"
-						value="General Query"
-					/>
-					<label for="generalQuery">General Query</label><br />
-					<input
-						type="radio"
-						id="supportRequest"
-						name="queryType"
-						value="Support Request"
-					/>
-					<label for="supportRequest">Support Request</label>
+					<div class="container-radio-btn">
+						<input
+							type="radio"
+							id="generalQuery"
+							name="queryType"
+							value="General Query"
+						/>
+						<label for="generalQuery">General Query</label>
+					</div>
+					<div class="container-radio-btn">
+						<input
+							type="radio"
+							id="supportRequest"
+							name="queryType"
+							value="Support Request"
+						/>
+						<label for="supportRequest">Support Request</label>
+					</div>
 					<span class="error-message" id="query-error"></span>
 				</div>
-				<div class="message-container" id="container-message">
+				<div class="container-message" id="container-message">
 					<label for="message" class="label"
 						>Message<span class="importance-star">*</span></label
 					>
