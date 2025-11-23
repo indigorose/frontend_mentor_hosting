@@ -39,26 +39,6 @@ body {
 	background-color: var(--color-green-200);
 }
 
-.container-message > textarea {
-	margin: 0.8rem 0 1rem 0;
-	padding: 0.7rem;
-	border-radius: 0.2rem;
-	border: 1px solid var(--color-grey-500);
-	resize: none;
-}
-
-.container-radio-btn {
-	padding: 0.7rem;
-	border-radius: 0.2rem;
-	border: 1px solid var(--color-grey-500);
-}
-
-.input-box {
-	padding: 0.8rem;
-	border-radius: 0.6rem;
-	border: 0.5px solid var(--color-grey-500);
-}
-
 .main-container {
 	border: 1px solid black;
 	border-radius: 0.8rem;
@@ -99,20 +79,19 @@ body {
 	margin-bottom: 1rem;
 }
 
-.query-radio-btn {
+.container-message > textarea {
 	margin: 0.8rem 0 1rem 0;
-	padding: 0.2rem;
-	border-radius: 0.2rem;
+	padding: 0.7rem;
+	border-radius: 0.6rem;
 	border: 1px solid var(--color-grey-500);
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
-	align-items: center;
-	padding: 1rem;
+	resize: none;
 }
 
-.radio-btn {
-	margin: 0;
+.input-box,
+.container-radio-btn {
+	padding: 0.8rem;
+	border-radius: 0.6rem;
+	border: 0.5px solid var(--color-grey-500);
 }
 
 .submit-container {
