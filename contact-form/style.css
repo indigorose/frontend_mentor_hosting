@@ -33,6 +33,18 @@
 	--color-grey-900: oklch(0.3625 0.0299 206.33);
 	font-size: 16px;
 	font-family: 'Karla', Arial, Helvetica, sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -40,13 +52,13 @@ body {
 }
 
 .main-container {
-	border: 1px solid black;
+	border: 1px solid white;
 	border-radius: 0.8rem;
 	max-width: 30rem;
 	background-color: var(--color-white);
 	display: grid;
 	grid-template-columns: 1fr;
-	margin: 0 1rem;
+	margin: 1rem 1rem;
 	padding: 1.5rem;
 	gap: 1.5rem;
 }
@@ -75,16 +87,37 @@ body {
 .container-message {
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	gap: 0.7rem;
 	margin-bottom: 1rem;
 }
 
 .container-message > textarea {
-	margin: 0.8rem 0 1rem 0;
+	margin: 0.8rem 0 0rem 0;
 	padding: 0.7rem;
 	border-radius: 0.6rem;
 	border: 1px solid var(--color-grey-500);
 	resize: none;
+}
+
+input[type='checkbox'] {
+	/* Double-sized Checkboxes */
+	-ms-transform: scale(2); /* IE */
+	-moz-transform: scale(2); /* FF */
+	-webkit-transform: scale(2); /* Safari and Chrome */
+	-o-transform: scale(2); /* Opera */
+	transform: scale(2);
+	grid-column-start: 1;
+	grid-column-end: 1;
+	height: 0.8em;
+	width: 0.8rem;
+	align-self: center;
+	margin-left: 0.5rem;
+}
+
+.label {
+	margin: 0;
+	color: var(--color-grey-900);
+	padding-bottom: 0.2rem;
 }
 
 .input-box,
@@ -92,23 +125,24 @@ body {
 	padding: 0.8rem;
 	border-radius: 0.6rem;
 	border: 0.5px solid var(--color-grey-500);
+	color: var(--color-grey-900);
 }
 
 .submit-container {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(1, 1fr);
 	row-gap: 1rem;
 }
 
-.consent-box {
-	grid-column-start: 1;
-	grid-column-end: 1;
-}
 .consent-text {
 	grid-column-start: 2;
-	grid-column-end: 6;
-	font-size: 0.8rem;
+	grid-column-end: 7;
+	font-size: 1rem;
+	display: inline;
+	margin: 0;
+	color: var(--color-grey-900);
+	padding-bottom: 0.2rem;
 }
 
 .submit-btn {
@@ -118,7 +152,10 @@ body {
 	color: var(--color-white);
 	border-radius: 0.5rem;
 	border: none;
-	font-size: 0.8rem;
+	font-size: 1rem;
+	padding: 1rem;
+	width: 100%;
+	font-weight: 700;
 }
 
 .error-message {

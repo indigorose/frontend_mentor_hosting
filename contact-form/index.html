@@ -99,10 +99,10 @@
 						name="consentBox"
 						id="consent"
 						class="consent"
-					/><label for="consent" class="consent-text">
+					/><span for="consent" class="consent-text">
 						I consent to be contacted by the team.
 						<span class="importance-star">*</span>
-					</label>
+					</span>
 					<span class="error-message" id="consent-error"></span>
 				</div>
 				<p>
@@ -112,15 +112,24 @@
 						name="Submit"
 						class="submit-btn"
 					/>
-					<input
+					<!-- <input
 						type="reset"
 						value="Reset"
 						name="Reset"
 						class="reset-btn"
 						onclick="resetErrors()"
-					/>
+					/> -->
 				</p>
 			</form>
+
+			<!-- Success message -->
+			<div class="container-success hidden">
+				<!-- tick icon -->
+				<h2 class="message-success">Message Sent!</h2>
+				<p class="success-text">
+					Thanks for completing the form. We'll be in touch soon.
+				</p>
+			</div>
 		</main>
 	</body>
 	<script src="app.js"></script>
