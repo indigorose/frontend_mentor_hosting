@@ -43,7 +43,7 @@ function validateForm() {
 		isValid = false;
 	}
 	if (!selected) {
-		queryErr.textContent = 'Please select as query type';
+		queryErr.textContent = 'Please select a query type';
 		isValid = false;
 	}
 
