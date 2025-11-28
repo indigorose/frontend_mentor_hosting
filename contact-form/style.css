@@ -54,7 +54,7 @@ body {
 .main-container {
 	border: 1px solid white;
 	border-radius: 0.8rem;
-	max-width: 30rem;
+	min-width: 30rem;
 	background-color: var(--color-white);
 	display: grid;
 	grid-template-columns: 1fr;
@@ -192,19 +192,45 @@ input[type='checkbox'] {
 	label {
 		margin: 0;
 	}
+
+	.main-container {
+		width: 700px;
+		margin: 3rem auto;
+	}
+
 	.container-name {
-		flex-direction: row;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.container-first-name,
+	.container-last-name {
+		margin-bottom: 0;
 	}
 
 	.container-query {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, 1fr);
+		height: 100px;
 	}
 
 	.container-query > .label {
 		grid-column-start: 1;
 		grid-column-end: 3;
+	}
+
+	.container-submit {
+		display: grid;
+		grid-template-columns: repeat(11, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		row-gap: 0.5rem;
+		margin-bottom: 0.8rem;
+	}
+
+	.container-submit > .error-message {
+		grid-column-start: 1;
+		grid-column-end: 10;
 	}
 
 	.container-query > .error-message {

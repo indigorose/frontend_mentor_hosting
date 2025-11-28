@@ -4,6 +4,7 @@ const email = document.getElementById('email');
 const queryTypes = document.querySelectorAll('input[name="queryType"]');
 const message = document.getElementById('messageText');
 const consent = document.getElementById('consent');
+const success = document.getElementById('container-success');
 
 function validateForm() {
 	const fnameErr = document.getElementById('fname-error');
@@ -60,6 +61,7 @@ function validateForm() {
 	}
 	if (isValid) {
 		// inner text change = "Form submitted successfully"
+		success.classList.remove('hidden');
 		return true;
 	} else {
 		return false;
