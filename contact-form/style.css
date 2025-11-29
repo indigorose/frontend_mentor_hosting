@@ -185,6 +185,13 @@ input[type='checkbox'] {
 	display: none;
 }
 
+.container-success {
+	height: 10rem;
+	background-color: var(--color-green-600);
+	border-radius: 0.5rem;
+	color: var(--color-grey-500);
+}
+
 @media (width >= 46.875rem) {
 	div,
 	input,
