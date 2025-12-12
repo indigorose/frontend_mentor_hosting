@@ -1,0 +1,120 @@
+:root {
+	/* Colours */
+	--neutral-900: oklch(0.1377 0.0882 266.57);
+	--neutral-800: oklch(0.2793 0.0492 284.43);
+	--neutral-700: oklch(0.319 0.0477 285.05);
+	--neutral-600: oklch(0.3696 0.0596 284.39);
+	--neutral-300: oklch(0.3696 0.0596 284.39);
+	--neutral-200: oklch(0.8694 0.0082 293.89);
+	--neutral-0: oklch(1 0 0);
+	--orange-500: oklch(0.7351 0.1836 53.37);
+	--blue-500: oklch(0.524 0.1968 271.71);
+	--blue-700: oklch(0.354 0.1919 275.84);
+
+	/* Text Presets */
+	--font-size-1: clamp(0.875rem, -0.9296rem + 7.6995vw, 6rem);
+	--fs-2: 6.857rem;
+	--fs-3: 3.714rem;
+	--fs-4: 2.286rem;
+	--fs-5: 1.429rem;
+	--fs-6: 1.286rem;
+	--fs-7: 1.143rem;
+	--fs-8: 1rem;
+
+	/* Line Height and Spacing */
+	--line-height-1: 100%;
+	--line-height-2: 120%;
+
+	--ls-1: -2px;
+	--spacing-0: 0px;
+	--spacing-025: 2px;
+	--spacing-050: 4px;
+	--spacing-075: 6px;
+	--spacing-100: 8px;
+	--spacing-125: 10px;
+	--spacing-150px: 12px;
+	--spacing-200px: 16px;
+	--spacing-250: 20px;
+	--spacing-300: 24px;
+	--spacing-400: 32px;
+	--spacing-500: 40px;
+	--spacing-600: 48px;
+	--spacing-800: 64px;
+	--spacing-1000: 80px;
+	--spacing-1200: 96px;
+	--spacing-1400: 112px;
+	--spacing-1600: 128px;
+	--spacing-1800: 140px;
+
+	/* Radius */
+	--radius-0: 0px;
+	--radius-4: 4px;
+	--radius-6: 6px;
+	--radius-8: 8px;
+	--radius-10: 10px;
+	--radius-12: 12px;
+	--radius-16: 16px;
+	--radius-20: 20px;
+	--radius-24: 24px;
+	--radius-full: 999px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 14px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Buttons */
+
+.primary-btn {
+	background-color: var(--blue-500);
+	color: var(--neutral-0);
+}
+
+.primary-btn:hover {
+	background-color: var(--blue-700);
+}
+
+.primary-btn:focus {
+	border: var(--radius-4) double var(--neutral-900);
+}
+
+/* Search Input */
+
+.search-input {
+	background-color: var(--neutral-800);
+}
+
+.search-input:hover {
+	background-color: var(--neutral-700);
+}
+
+.search-input:focus {
+	background-color: var(--neutral-800);
+	border: var(--radius-4) solid var(--neutral-0);
+}
+
+/* Dropdown */
+
+.dropdown {
+	background-color: var(--neutral-900);
+}
+
+.dropdown:hover {
+	background-color: var(--neutral-700);
+}
+.dropdown:hover {
+	background-color: var(--neutral-700);
+}
+.dropdown:hover {
+	background-color: var(--neutral-700);
+}
