@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- displays site properly based on user's device -->
-
 		<link
 			rel="icon"
 			type="image/png"
@@ -13,39 +12,43 @@
 		/>
 		<link rel="stylesheet" href="style.css" />
 
-		<title>Frontend Mentor | Weather app</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
+		<title>Weather app</title>
 	</head>
 	<body>
-		Units Switch to Imperial/Metric Temperature Celsius (°C) Fahrenheit (°F)
-		Wind Speed km/h mph Precipitation Millimeters (mm) Inches (in) How's the
-		sky looking today? Search for a city, e.g., New York Search Feels like
-		<!-- Insert temperature here -->
-
-		Humidity
-		<!-- Insert humidity here -->
-
-		Wind
-		<!-- Insert wind here -->
-
-		Precipitation
-		<!-- Insert precipitation here -->
-
-		Daily forecast
-		<!-- Insert daily forecast for the next 7 days here -->
-
-		Hourly forecast
-		<!-- Insert hourly forecast for the selected day here -->
+		<main class="container mobile tablet desktop">
+			<nav class="container container-header">
+				<div class="header-logo">
+					<img
+						src="./assets/images/favicon-32x32.png"
+						alt="Weather now logo"
+					/>
+					<p class="header-title">Weather Now</p>
+				</div>
+				<div class="header-dropdown">
+					<button class="dropdown-title">
+						<img
+							src="./assets/images/icon-units.svg"
+							alt="Settings Cog"
+						/>Units<img
+							src="./assets/images/icon-dropdown.svg"
+							alt="Dropdown arrow"
+						/>
+					</button>
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</nav>
+		</main>
 	</body>
 	<script src="app.js"></script>
 </html>
