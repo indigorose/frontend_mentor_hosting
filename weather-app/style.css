@@ -71,19 +71,33 @@ body {
 	font-size: 14px;
 	margin: 0 auto;
 	padding: 0;
+	background-color: var(--neutral-900);
+}
+
+main,
+nav,
+header,
+section,
+div,
+img,
+h1,
+h2,
+p {
+	border: 1px solid rgb(245, 206, 206);
 }
 
 /* Buttons */
 
+.hidden {
+	display: none;
+}
 .primary-btn {
 	background-color: var(--blue-500);
 	color: var(--neutral-0);
 }
-
 .primary-btn:hover {
 	background-color: var(--blue-700);
 }
-
 .primary-btn:focus {
 	border: var(--radius-4) double var(--neutral-900);
 }
@@ -93,11 +107,9 @@ body {
 .search-input {
 	background-color: var(--neutral-800);
 }
-
 .search-input:hover {
 	background-color: var(--neutral-700);
 }
-
 .search-input:focus {
 	background-color: var(--neutral-800);
 	border: var(--radius-4) solid var(--neutral-0);
@@ -108,7 +120,6 @@ body {
 .dropdown {
 	background-color: var(--neutral-900);
 }
-
 .dropdown:hover {
 	background-color: var(--neutral-700);
 }

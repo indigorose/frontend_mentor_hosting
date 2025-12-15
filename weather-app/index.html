@@ -19,13 +19,13 @@
 			<nav class="container container-header">
 				<div class="header-logo">
 					<img
-						src="./assets/images/favicon-32x32.png"
+						src="./assets/images/logo.svg"
 						alt="Weather now logo"
 					/>
 					<p class="header-title">Weather Now</p>
 				</div>
 				<div class="header-dropdown">
-					<button class="dropdown-title">
+					<div class="dropdown-title">
 						<img
 							src="./assets/images/icon-units.svg"
 							alt="Settings Cog"
@@ -33,24 +33,343 @@
 							src="./assets/images/icon-dropdown.svg"
 							alt="Dropdown arrow"
 						/>
-					</button>
+					</div>
 					<ul>
 						<p class="list-title">Temperature</p>
-						<li>Celsius (&deg;C)</li>
-						<li></li>
+						<li class="list-item">
+							<p class="button">Celsius (&deg;C)</p>
+							<img
+								class="list-item-active"
+								src="./assets/images/icon-checkmark.svg"
+							/>
+						</li>
+						<li class="list-item">
+							<p class="button">Fahrenheit (&deg;F)</p>
+							<img
+								class="list-item-active"
+								src="./assets/images/icon-checkmark.svg"
+							/>
+						</li>
 					</ul>
 					<ul>
 						<p class="list-title">Wind Speed</p>
-						<li></li>
-						<li></li>
+						<li class="list-item">
+							<p class="button">km/h</p>
+							<img
+								class="list-item-active"
+								src="./assets/images/icon-checkmark.svg"
+							/>
+						</li>
+						<li class="list-item">
+							<p class="button">mph</p>
+							<img
+								class="list-item-active"
+								src="./assets/images/icon-checkmark.svg"
+							/>
+						</li>
 					</ul>
 					<ul>
 						<p class="list-title">Precipitation</p>
-						<li></li>
-						<li></li>
+						<li class="list-item">
+							<p class="button">Millimeters (mm)</p>
+							<img
+								class="list-item-active"
+								src="./assets/images/icon-checkmark.svg"
+							/>
+						</li>
+						<li class="list-item">
+							<p class="button">Inches (in)</p>
+							<img
+								class="list-item-active"
+								src="./assets/images/icon-checkmark.svg"
+							/>
+						</li>
 					</ul>
 				</div>
 			</nav>
+			<header class="container-main-title">
+				<h1 class="main-title">How's the sky looking today?</h1>
+			</header>
+			<section class="container-main-content">
+				<section class="container-search">
+					<form
+						onsubmit="return weatherResult()"
+						class="content-search"
+						id="content-search"
+						name="form"
+					>
+						<div class="input-wrapper">
+							<img
+								src="./assets/images/icon-search.svg"
+								alt="magnifying glass search icon"
+								class="input-icon"
+							/>
+							<input
+								type="text"
+								name="cityInput"
+								id="cityInput"
+								class="cityInput input-box"
+								placeholder="Search for a place..."
+							/>
+						</div>
+						<p>
+							<input
+								type="submit"
+								value="Search"
+								name="Submit"
+								class="submit-btn"
+							/>
+						</p>
+					</form>
+				</section>
+				<section class="container-content">
+					<div class="content-left">
+						<div class="content-weather-info">
+							<div class="weather-info">
+								<div class="location-info">
+									<p class="location-city" id="location"></p>
+									<p class="date-info" id="date-info"></p>
+								</div>
+								<div class="content-temperature">
+									<img
+										src="./assets/images/icon-sunny.webp"
+										alt="current weather icon"
+										id="temp-icon"
+									/>
+									<p
+										class="temperature-info"
+										id="temperature-info"
+									>
+										20(&deg;)
+									</p>
+								</div>
+							</div>
+							<div class="container-weather-details">
+								<div class="content-feel">
+									<p class="details-title">Feels Like</p>
+									<p
+										class="detail-content"
+										id="details-temp"
+									></p>
+								</div>
+								<div class="content-humidity">
+									<p class="details-title">Humidity</p>
+									<p
+										class="detail-content"
+										id="details-humidity"
+									></p>
+								</div>
+								<div class="content-wind">
+									<p class="details-title">Wind</p>
+									<p
+										class="detail-content"
+										id="details-wind"
+									></p>
+								</div>
+								<div class="content-rain">
+									<p class="details-title">Precipitation</p>
+									<p
+										class="detail-content"
+										id="details-rain"
+									></p>
+								</div>
+							</div>
+						</div>
+						<div class="daily-forecast">
+							<h2 class="title-daily-forecast">Daily forecast</h2>
+							<div class="card-weather-daily" id="weather-daily">
+								<p class="card-label-day" id="label-day"></p>
+								<img
+									src=""
+									alt=""
+									class="weather-icon"
+									id="weather-icon"
+								/>
+								<div class="card-temp-range">
+									<p class="temp-high" id="temp-high"></p>
+									<p class="temp-low" id="temp-low"></p>
+								</div>
+							</div>
+							<div class="card-weather-daily" id="weather-daily">
+								<p class="card-label-day" id="label-day"></p>
+								<img
+									src=""
+									alt=""
+									class="weather-icon"
+									id="weather-icon"
+								/>
+								<div class="card-temp-range">
+									<p class="temp-high" id="temp-high"></p>
+									<p class="temp-low" id="temp-low"></p>
+								</div>
+							</div>
+							<div class="card-weather-daily" id="weather-daily">
+								<p class="card-label-day" id="label-day"></p>
+								<img
+									src=""
+									alt=""
+									class="weather-icon"
+									id="weather-icon"
+								/>
+								<div class="card-temp-range">
+									<p class="temp-high" id="temp-high"></p>
+									<p class="temp-low" id="temp-low"></p>
+								</div>
+							</div>
+							<div class="card-weather-daily" id="weather-daily">
+								<p class="card-label-day" id="label-day"></p>
+								<img
+									src=""
+									alt=""
+									class="weather-icon"
+									id="weather-icon"
+								/>
+								<div class="card-temp-range">
+									<p class="temp-high" id="temp-high"></p>
+									<p class="temp-low" id="temp-low"></p>
+								</div>
+							</div>
+							<div class="card-weather-daily" id="weather-daily">
+								<p class="card-label-day" id="label-day"></p>
+								<img
+									src=""
+									alt=""
+									class="weather-icon"
+									id="weather-icon"
+								/>
+								<div class="card-temp-range">
+									<p class="temp-high" id="temp-high"></p>
+									<p class="temp-low" id="temp-low"></p>
+								</div>
+							</div>
+							<div class="card-weather-daily" id="weather-daily">
+								<p class="card-label-day" id="label-day"></p>
+								<img
+									src=""
+									alt=""
+									class="weather-icon"
+									id="weather-icon"
+								/>
+								<div class="card-temp-range">
+									<p class="temp-high" id="temp-high"></p>
+									<p class="temp-low" id="temp-low"></p>
+								</div>
+							</div>
+							<div class="card-weather-daily" id="weather-daily">
+								<p class="card-label-day" id="label-day"></p>
+								<img
+									src=""
+									alt=""
+									class="weather-icon"
+									id="weather-icon"
+								/>
+								<div class="card-temp-range">
+									<p class="temp-high" id="temp-high"></p>
+									<p class="temp-low" id="temp-low"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content-hourly-forecast">
+						<div class="header-hourly-forecast">
+							<h2>Hourly forecast</h2>
+							<div class="dropdown-day">
+								<ul class="list-day" id="list-day">
+									<li class="day-item" id="day-item"></li>
+									<li class="day-item" id="day-item"></li>
+									<li class="day-item" id="day-item"></li>
+									<li class="day-item" id="day-item"></li>
+									<li class="day-item" id="day-item"></li>
+									<li class="day-item" id="day-item"></li>
+									<li class="day-item" id="day-item"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="container-card-hourly">
+							<div class="card-hour" id="card-hour">
+								<img
+									src=""
+									alt=""
+									class="card-icon"
+									id="card-icon"
+								/>
+								<p class="card-time" id="card-time"></p>
+								<p class="card-min-temp" id="min-temp"></p>
+							</div>
+							<div class="card-hour" id="card-hour">
+								<img
+									src=""
+									alt=""
+									class="card-icon"
+									id="card-icon"
+								/>
+								<p class="card-time" id="card-time"></p>
+								<p class="card-min-temp" id="min-temp"></p>
+							</div>
+							<div class="card-hour" id="card-hour">
+								<img
+									src=""
+									alt=""
+									class="card-icon"
+									id="card-icon"
+								/>
+								<p class="card-time" id="card-time"></p>
+								<p class="card-min-temp" id="min-temp"></p>
+							</div>
+							<div class="card-hour" id="card-hour">
+								<img
+									src=""
+									alt=""
+									class="card-icon"
+									id="card-icon"
+								/>
+								<p class="card-time" id="card-time"></p>
+								<p class="card-min-temp" id="min-temp"></p>
+							</div>
+							<div class="card-hour" id="card-hour">
+								<img
+									src=""
+									alt=""
+									class="card-icon"
+									id="card-icon"
+								/>
+								<p class="card-time" id="card-time"></p>
+								<p class="card-min-temp" id="min-temp"></p>
+							</div>
+							<div class="card-hour" id="card-hour">
+								<img
+									src=""
+									alt=""
+									class="card-icon"
+									id="card-icon"
+								/>
+								<p class="card-time" id="card-time"></p>
+								<p class="card-min-temp" id="min-temp"></p>
+							</div>
+							<div class="card-hour" id="card-hour">
+								<img
+									src=""
+									alt=""
+									class="card-icon"
+									id="card-icon"
+								/>
+								<p class="card-time" id="card-time"></p>
+								<p class="card-min-temp" id="min-temp"></p>
+							</div>
+							<div class="card-hour" id="card-hour">
+								<img
+									src=""
+									alt=""
+									class="card-icon"
+									id="card-icon"
+								/>
+								<p class="card-time" id="card-time"></p>
+								<p class="card-min-temp" id="min-temp"></p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
 		</main>
 	</body>
 	<script src="app.js"></script>
