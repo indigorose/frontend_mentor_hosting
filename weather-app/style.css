@@ -129,3 +129,11 @@ p {
 .dropdown:hover {
 	background-color: var(--neutral-700);
 }
+
+.container {
+	  display:grid;
+}
+
+.hidden {
+	display:none;
+}
