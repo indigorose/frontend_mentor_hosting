@@ -131,9 +131,104 @@ p {
 }
 
 .container {
-	  display:grid;
+	display: grid;
 }
 
 .hidden {
-	display:none;
+	display: none;
+}
+
+/* Mobile Styling */
+
+/* ----- Header layout ----- */
+.container-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 24px;
+}
+
+/* Logo */
+.header-logo img {
+	height: 32px;
+}
+
+/* ----- Dropdown container ----- */
+.header-dropdown {
+	position: relative; /* anchor for absolute dropdown */
+}
+
+/* Toggle button */
+.menu-toggle {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+}
+
+/* ----- Dropdown menu ----- */
+.dropdown-list {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0; /* IMPORTANT: aligns dropdown to the right */
+	width: 260px;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+	list-style: none;
+	padding: 8px 0;
+	z-index: 1000;
+}
+
+/* Hidden state */
+.hidden {
+	display: none;
+}
+
+/* ----- Dropdown content ----- */
+.list-title {
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 8px 16px;
+	color: #6b7280;
+}
+
+/* Divider line */
+.divider {
+	border-top: 1px solid #e5e7eb;
+	margin-top: 8px;
+}
+
+/* Menu items */
+.list-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 16px;
+	cursor: pointer;
+}
+
+.list-item:hover {
+	background-color: #f3f4f6;
+}
+
+/* Labels */
+.list-item p {
+	margin: 0;
+}
+
+/* Active checkmark */
+.list-item-active {
+	width: 16px;
+	height: 16px;
+	visibility: hidden;
+}
+
+/* Example active state */
+.list-item.active .list-item-active {
+	visibility: visible;
 }

@@ -49,3 +49,42 @@ fetch(url)
 		console.log(next8Hours);
 	})
 	.catch((err) => console.error(err));
+
+// Drop down menu control
+
+const toggleButton = document.getElementById('menu-toggle');
+const dropdown = document.querySelector('.dropdown-list');
+const items = document.querySelectorAll('.list-item');
+
+// Toggle dropdown
+toggleButton.addEventListener('click', (e) => {
+	e.stopPropagation();
+	dropdown.classList.toggle('hidden');
+});
+
+// Close when clicking outside
+document.addEventListener('click', () => {
+	if (!dropdown.classList.contains('hidden')) {
+		dropdown.classList.add('hidden');
+	}
+});
+
+// Prevent closing when clicking inside dropdown
+dropdown.addEventListener('click', (e) => {
+	e.stopPropagation();
+});
+items.forEach((item) => {
+	item.addEventListener('click', () => {
+		const section = item.previousElementSibling?.classList.contains(
+			'list-title'
+		)
+			? item.previousElementSibling.textContent
+			: null;
+
+		// Remove active from siblings
+		const siblings = item.parentElement.querySelectorAll('.list-item');
+		siblings.forEach((sib) => sib.classList.remove('active'));
+
+		item.classList.add('active');
+	});
+});

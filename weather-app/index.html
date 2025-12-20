@@ -16,15 +16,15 @@
 	</head>
 	<body>
 		<main class="container mobile tablet desktop">
-			<nav class="container container-header">
-				<a class="header-logo">
+			<header class="container container-header">
+				<a class="header-logo" href="#">
 					<img
 						src="./assets/images/logo.svg"
 						alt="Weather now logo"
-					/> Weather Now
+					/>
 				</a>
-				<div class="header-dropdown">
-					<div class="dropdown-title" id="dropdown-title">
+				<nav class="header-dropdown">
+					<button class="dropdown-menu menu-toggle" id="menu-toggle">
 						<img
 							src="./assets/images/icon-units.svg"
 							alt="Settings Cog"
@@ -32,11 +32,11 @@
 							src="./assets/images/icon-dropdown.svg"
 							alt="Dropdown arrow"
 						/>
-					</div>
-					<ul>
-						<p class="list-title">Temperature</p>
+					</button>
+					<ul class="dropdown-list hidden">
+						<li class="list-title divider">Temperature</li>
 						<li class="list-item">
-							<p class="button">Celsius (&deg;C)</p>
+							<p class="but">Celsius (&deg;C)</p>
 							<img
 								class="list-item-active"
 								src="./assets/images/icon-checkmark.svg"
@@ -49,9 +49,7 @@
 								src="./assets/images/icon-checkmark.svg"
 							/>
 						</li>
-					</ul>
-					<ul>
-						<p class="list-title">Wind Speed</p>
+						<li class="list-title divider">Wind Speed</li>
 						<li class="list-item">
 							<p class="button">km/h</p>
 							<img
@@ -66,9 +64,7 @@
 								src="./assets/images/icon-checkmark.svg"
 							/>
 						</li>
-					</ul>
-					<ul>
-						<p class="list-title">Precipitation</p>
+						<li class="list-title divider">Precipitation</li>
 						<li class="list-item">
 							<p class="button">Millimeters (mm)</p>
 							<img
@@ -84,11 +80,11 @@
 							/>
 						</li>
 					</ul>
-				</div>
-			</nav>
-			<header class="container-main-title">
-				<h1 class="main-title">How's the sky looking today?</h1>
+				</nav>
 			</header>
+			<section class="container-main-title">
+				<h1 class="main-title">How's the sky looking today?</h1>
+			</section>
 			<section class="container-main-content">
 				<section class="container-search">
 					<form
