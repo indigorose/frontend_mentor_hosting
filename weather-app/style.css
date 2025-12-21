@@ -1,3 +1,13 @@
+/* --- Fonts --- */
+
+@font-face {
+	font-family: 'DM Sans';
+	src: url(./assets/fonts/DM_Sans/static/DMSans-Medium.ttf);
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	/* Colours */
 	--neutral-900: oklch(0.1377 0.0882 266.57);
@@ -32,8 +42,8 @@
 	--spacing-075: 6px;
 	--spacing-100: 8px;
 	--spacing-125: 10px;
-	--spacing-150px: 12px;
-	--spacing-200px: 16px;
+	--spacing-150: 12px;
+	--spacing-200: 16px;
 	--spacing-250: 20px;
 	--spacing-300: 24px;
 	--spacing-400: 32px;
@@ -134,23 +144,36 @@ p {
 	display: grid;
 }
 
+/* --- Hidden State --- */
+
 .hidden {
 	display: none;
 }
 
-/* Mobile Styling */
+/* ----- Mobile Styling ----- 375x2413 */
+
+/* ---- Main container styling ----- */
+
+.mobile {
+	padding: var(--spacing-200);
+}
 
 /* ----- Header layout ----- */
 .container-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 16px 24px;
+	padding: 0;
 }
 
 /* Logo */
+.header-logo {
+	height: 33px;
+	padding: var(--spacing-025) 0;
+}
+
 .header-logo img {
-	height: 32px;
+	height: 100%;
 }
 
 /* ----- Dropdown container ----- */
@@ -162,11 +185,17 @@ p {
 .menu-toggle {
 	display: flex;
 	align-items: center;
-	gap: 8px;
-	background: none;
+	gap: var(--spacing-075);
+	padding: var(--spacing-100) var(--spacing-125);
+	border-radius: var(--radius-6);
+	background-color: var(--neutral-800);
 	border: none;
 	cursor: pointer;
 	font: inherit;
+	color: var(--neutral-0);
+	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+	font-size: var(--fs-8);
+	line-height: var(--line-height-2);
 }
 
 /* ----- Dropdown menu ----- */
@@ -181,11 +210,6 @@ p {
 	list-style: none;
 	padding: 8px 0;
 	z-index: 1000;
-}
-
-/* Hidden state */
-.hidden {
-	display: none;
 }
 
 /* ----- Dropdown content ----- */
