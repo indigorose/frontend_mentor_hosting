@@ -8,6 +8,16 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'Bricolage Grotesque';
+	src: url('./assets/fonts/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf');
+	font-weight: 700;
+	font-style: bold;
+	font-display: swap;
+}
+
+/* ---- Key Style Elements */
+
 :root {
 	/* Colours */
 	--neutral-900: oklch(0.1377 0.0882 266.57);
@@ -140,7 +150,8 @@ p {
 	background-color: var(--neutral-700);
 }
 
-.container {
+/* ---- Grid Container ---- */
+[class*='container'] {
 	display: grid;
 }
 
@@ -255,4 +266,26 @@ p {
 /* Example active state */
 .list-item.active .list-item-active {
 	visibility: visible;
+}
+
+/* ---- Main Title ---- */
+
+.container-main-title {
+	padding: var(--spacing-600) 0;
+}
+
+.main-title {
+	font-family: 'Bricolage Grotesque';
+	color: var(--neutral-0);
+	font-size: var(--fs-3);
+	line-height: var(--line-height-2);
+	font-weight: 700;
+	text-align: center;
+}
+
+/* ---- Main Content ---- */
+
+.container-main-content {
+	display: grid;
+	gap: var(--spacing-500);
 }
