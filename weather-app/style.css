@@ -289,3 +289,12 @@ p {
 	display: grid;
 	gap: var(--spacing-500);
 }
+
+/* Search Container */
+
+.input-box {
+	outline: none;
+	background-color: var(--neutral-800);
+	color: var(--neutral-0);
+	border: 0;
+}
