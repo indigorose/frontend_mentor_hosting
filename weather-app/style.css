@@ -292,9 +292,21 @@ p {
 
 /* Search Container */
 
+.input-wrapper {
+	color: var(--neutral-0);
+}
+
 .input-box {
 	outline: none;
 	background-color: var(--neutral-800);
 	color: var(--neutral-0);
 	border: 0;
+}
+
+.submit-btn {
+	background-color: var(--blue-500);
+	border: 0;
+	outline: none;
+	color: var(--neutral-0);
+	padding: var(--spacing-075);
 }
