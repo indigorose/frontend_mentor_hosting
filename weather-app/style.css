@@ -293,13 +293,15 @@ p {
 /* Search Container */
 
 .input-wrapper {
-	color: var(--neutral-0);
+	color: var(--neutral-200);
+	background-color: var(--neutral-800);
+	padding: var(--spacing-100);
 }
 
 .input-box {
 	outline: none;
 	background-color: var(--neutral-800);
-	color: var(--neutral-0);
+	color: var(--neutral-200);
 	border: 0;
 }
 
