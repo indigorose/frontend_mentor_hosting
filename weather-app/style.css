@@ -296,15 +296,12 @@ p {
 	height: 124px;
 }
 
-.input-icon {
-	color: var(--neutral-200);
-}
 .input-wrapper {
 	display: flex;
 	align-items: center;
 	gap: var(--spacing-075);
 	padding: var(--spacing-200) var(--spacing-300);
-	border-radius: var(--radius-6);
+	border-radius: var(--radius-12);
 	background-color: var(--neutral-800);
 	border: none;
 	cursor: pointer;
@@ -315,6 +312,9 @@ p {
 	line-height: var(--line-height-2);
 }
 
+.input-icon {
+	color: var(--neutral-200);
+}
 .input-box {
 	outline: none;
 	background-color: var(--neutral-800);
@@ -325,6 +325,7 @@ p {
 
 .submit-btn {
 	background-color: var(--blue-500);
+	border-radius: var(--radius-12);
 	border: 0;
 	outline: none;
 	color: var(--neutral-0);
@@ -334,4 +335,12 @@ p {
 	text-align: center;
 	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
 	font-size: var(--fs-8);
+}
+
+/* ---- Content Container ---- */
+.weather-info {
+	background-image: url('./assets/images/bg-today-small.svg');
+	background-repeat: no-repeat;
+	border-radius: var(--radius-12);
+	color: var(--neutral-200);
 }
