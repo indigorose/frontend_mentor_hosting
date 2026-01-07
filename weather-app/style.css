@@ -32,7 +32,8 @@
 	--blue-700: oklch(0.354 0.1919 275.84);
 
 	/* Text Presets */
-	--font-size-1: clamp(0.875rem, -0.9296rem + 7.6995vw, 6rem);
+	font-size: 14px;
+	/* --font-size-1: clamp(0.875rem, -0.9296rem + 7.6995vw, 6rem); */
 	--fs-2: 6.857rem;
 	--fs-3: 3.714rem;
 	--fs-4: 2.286rem;
@@ -375,6 +376,17 @@ p {
 }
 
 .content-temperature img {
-	grid-area: span 1/1;
-	width: 10%;
+	grid-area: 1 / 1/1/2;
+	width: 120px;
+	height: 120px;
+}
+.temperature-info {
+	grid-area: 1/2/1 / span 4;
+	text-align: center;
+	align-self: center;
+	font-size: var(--fs-2);
+	font-family: 'DM Sans', sans-serif;
+	font-style: italic;
+	font-weight: 600;
+	line-height: var(--ls-1);
 }
