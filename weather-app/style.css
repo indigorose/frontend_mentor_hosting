@@ -390,3 +390,14 @@ p {
 	font-weight: 600;
 	line-height: var(--ls-1);
 }
+
+.container-weather-details {
+	color: var(--neutral-200);
+	grid-template-columns: repeat(2, 1fr);
+	font-family: 'DM Sans', sans-serif;
+}
+
+.card {
+	background-color: var(--neutral-800);
+	border-radius: var(--radius-8);
+}
