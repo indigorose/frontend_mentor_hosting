@@ -2,8 +2,8 @@
 
 @font-face {
 	font-family: 'DM Sans';
-	src: url(./assets/fonts/DM_Sans/static/DMSans-Medium.ttf);
-	font-weight: 400;
+	src: url('./assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf');
+	font-weight: 100 400;
 	font-style: normal;
 	font-display: swap;
 }
@@ -93,6 +93,7 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	background-color: var(--neutral-900);
+	font-family: 'DM Sans', sans-serif;
 }
 
 main,
@@ -339,6 +340,11 @@ p {
 }
 
 /* ---- Content Container ---- */
+
+.content-weather-info {
+	display: grid;
+	gap: var(--spacing-250);
+}
 .weather-info {
 	background-image: url('./assets/images/bg-today-small.svg');
 	background-repeat: no-repeat;
@@ -395,9 +401,36 @@ p {
 	color: var(--neutral-200);
 	grid-template-columns: repeat(2, 1fr);
 	font-family: 'DM Sans', sans-serif;
+	gap: var(--spacing-200);
 }
 
 .card {
 	background-color: var(--neutral-800);
 	border-radius: var(--radius-8);
+	padding: var(--spacing-250);
+	display: grid;
+	gap: var(--spacing-300);
+}
+
+.details-title {
+	color: var(--neutral-200);
+	font-size: var(--fs-6);
+}
+
+.detail-content {
+	font-size: var(--fs-4);
+	color: var(--neutral-0);
+	font-weight: 100;
+}
+
+/* ---- Daily Forecast Layout ---- */
+
+.daily-forecast {
+	color: var(--neutral-0);
+	display: grid;
+	gap: var(--spacing-200);
+}
+
+.card-weather-daily {
+	background-color: var(--neutral-800);
 }
