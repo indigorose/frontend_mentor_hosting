@@ -431,6 +431,13 @@ p {
 	gap: var(--spacing-200);
 }
 
+.cards-weather-daily {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--spacing-200);
+}
+
 .card-weather-daily {
 	background-color: var(--neutral-800);
+	padding: var(--spacing-200) var(--spacing-125);
 }
