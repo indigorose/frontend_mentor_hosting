@@ -441,3 +441,13 @@ p {
 	background-color: var(--neutral-800);
 	padding: var(--spacing-200) var(--spacing-125);
 }
+
+.content-hourly-forecast {
+	color: var(--neutral-0);
+	background-color: var(--neutral-800);
+	display: grid;
+}
+
+ul > li {
+	list-style-type: none;
+}
