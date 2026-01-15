@@ -410,6 +410,7 @@ p {
 	padding: var(--spacing-250);
 	display: grid;
 	gap: var(--spacing-300);
+	border: 1px solid var(--neutral-600);
 }
 
 .details-title {
@@ -440,6 +441,7 @@ p {
 .card-weather-daily {
 	background-color: var(--neutral-800);
 	padding: var(--spacing-200) var(--spacing-125);
+	border: 1px solid var(--neutral-600);
 }
 
 .content-hourly-forecast {
@@ -450,4 +452,9 @@ p {
 
 ul > li {
 	list-style-type: none;
+}
+
+.card-hour {
+	background-color: var(--neutral-700);
+	border: 1px solid var(--neutral-600);
 }
