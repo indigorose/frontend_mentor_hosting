@@ -201,6 +201,7 @@ p {
 	gap: var(--spacing-075);
 	padding: var(--spacing-100) var(--spacing-125);
 	border-radius: var(--radius-6);
+	border: 1px solid var(--neutral-700);
 	background-color: var(--neutral-800);
 	border: none;
 	cursor: pointer;
@@ -217,26 +218,32 @@ p {
 	top: calc(100% + 8px);
 	right: 0; /* IMPORTANT: aligns dropdown to the right */
 	width: 260px;
-	background-color: #ffffff;
-	border-radius: 8px;
+	border-radius: var(--spacing-150);
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 	list-style: none;
-	padding: 8px 0;
+	padding: var(--spacing-075);
 	z-index: 1000;
+	background-color: var(--neutral-800);
+	color: var(--neutral-0);
+	border: 1px solid var(--neutral-700);
 }
 
 /* ----- Dropdown content ----- */
+.measurement-title {
+	padding: var(--spacing-100);
+}
+
 .list-title {
 	font-size: 0.75rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	padding: 8px 16px;
-	color: #6b7280;
+	color: var(--neutral-300);
 }
 
 /* Divider line */
 .divider {
-	border-top: 1px solid #e5e7eb;
+	border-top: 1px solid var(--neutral-300);
 	margin-top: 8px;
 }
 
@@ -250,7 +257,8 @@ p {
 }
 
 .list-item:hover {
-	background-color: #f3f4f6;
+	background-color: var(--neutral-700);
+	border-radius: var(--spacing-075);
 }
 
 /* Labels */

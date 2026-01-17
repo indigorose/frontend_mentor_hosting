@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -34,16 +34,19 @@
 						/>
 					</button>
 					<ul class="dropdown-list hidden">
+						<p class="measurement-title">
+							Switch to <span id="measurement">Imperial</span>
+						</p>
 						<li class="list-title divider">Temperature</li>
 						<li class="list-item">
-							<p class="but">Celsius (&deg;C)</p>
+							<p class="button metric">Celsius (&deg;C)</p>
 							<img
 								class="list-item-active"
 								src="./assets/images/icon-checkmark.svg"
 							/>
 						</li>
 						<li class="list-item">
-							<p class="button">Fahrenheit (&deg;F)</p>
+							<p class="button imperial">Fahrenheit (&deg;F)</p>
 							<img
 								class="list-item-active"
 								src="./assets/images/icon-checkmark.svg"
@@ -51,14 +54,14 @@
 						</li>
 						<li class="list-title divider">Wind Speed</li>
 						<li class="list-item">
-							<p class="button">km/h</p>
+							<p class="button metric">km/h</p>
 							<img
 								class="list-item-active"
 								src="./assets/images/icon-checkmark.svg"
 							/>
 						</li>
 						<li class="list-item">
-							<p class="button">mph</p>
+							<p class="button imperial">mph</p>
 							<img
 								class="list-item-active"
 								src="./assets/images/icon-checkmark.svg"
@@ -66,14 +69,14 @@
 						</li>
 						<li class="list-title divider">Precipitation</li>
 						<li class="list-item">
-							<p class="button">Millimeters (mm)</p>
+							<p class="button metric">Millimeters (mm)</p>
 							<img
 								class="list-item-active"
 								src="./assets/images/icon-checkmark.svg"
 							/>
 						</li>
 						<li class="list-item">
-							<p class="button">Inches (in)</p>
+							<p class="button imperial">Inches (in)</p>
 							<img
 								class="list-item-active"
 								src="./assets/images/icon-checkmark.svg"
@@ -88,7 +91,7 @@
 			<section class="container-main-content">
 				<section class="container-search">
 					<form
-						onsubmit="return weatherResult()"
+						onsubmit="return weatherResult();"
 						class="content-search"
 						id="content-search"
 						name="form"
